@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c93afee-30c3-41a9-8c28-dc7144d41f47" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/THDisplay/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/THDisplay/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/THDisplay/Objects/Display.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/THDisplay/Objects/TigerHacksDisplay.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/THDisplay/Objects/TigerHeadView" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/THDisplay/main.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Objects/Display.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Objects/TigerHacksDisplay.kt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Objects/TigerHeadView" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Tools/Tools/Functions.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Tools/Tools/OpenSimplexNoise.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Tools/Tools/UNLICENSE" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Tools/Tools/Vector.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/main.kt" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +20,24 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Functions.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tools/Tools/Functions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#2207#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/THDisplay" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -35,7 +55,9 @@
     <option name="width" value="1946" />
     <option name="height" value="2173" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -62,11 +84,6 @@
               <item name="THDisplay" type="b2602c69:ProjectViewProjectNode" />
               <item name="THDisplay" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="THDisplay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="THDisplay" type="462c0819:PsiDirectoryNode" />
-              <item name="THDisplay" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -78,6 +95,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kolbe\Documents\Intellj Projects\THDisplay" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -187,18 +209,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539128722506</updated>
-      <workItem from="1539128724057" duration="29000" />
+      <workItem from="1539128724057" duration="373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29000" />
+    <option name="totallyTimeSpent" value="373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3872" height="2192" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -235,5 +258,17 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Tools/Tools/Functions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#2207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
