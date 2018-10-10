@@ -29,9 +29,6 @@ class Display() {
     init {
         panel.scene = Scene(root, 500.0, 500.0)
         frameWindow = Window(frame)
-//        frame.addWindowListener( listener? : WindowListener ->{
-//
-//        })
         addShapeCircle()
     }
 

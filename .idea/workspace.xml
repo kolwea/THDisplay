@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c93afee-30c3-41a9-8c28-dc7144d41f47" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/FrameFactory.kt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/Display.class" afterPath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/Display.class" />
-      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/TigerHacksDisplay.class" afterPath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/TigerHacksDisplay.class" />
+      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/Stylesheets/style.css" afterPath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/Stylesheets/style.css" />
       <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Display.kt" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Display.kt" />
+      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/FrameFactory.kt" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/FrameFactory.kt" />
+      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/src/Stylesheets/style.css" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/Stylesheets/style.css" />
       <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/src/TigerHacksDisplay.java" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/TigerHacksDisplay.java" />
+      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/src/javax/swing/WindowConstants.java" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/javax/swing/WindowConstants.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,29 +19,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="750">
-      <file leaf-file-name="Display.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Display.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Display.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="65" column="21" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#334#0" expanded="true" />
-                <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-                <element signature="n#!!block;n#addShapeCircle#0;n#!!block;n#Display#0" expanded="false" />
-                <element signature="n#!!block;n#testValues#0;n#!!block;n#Display#0" expanded="false" />
-                <element signature="n#!!block;n#initFullscreen#0;n#!!block;n#Display#0" expanded="false" />
-                <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
-                <element signature="n#!!block;n#checkDevice#0;n#!!block;n#Display#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="440">
+              <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TigerHacksDisplay.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TigerHacksDisplay.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/TigerHacksDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+            <state relative-caret-position="720">
+              <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#379#380#0" expanded="true" />
@@ -48,16 +41,6 @@
                 <element signature="e#465#466#0" expanded="true" />
                 <element signature="e#505#506#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Stylesheets/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -166,13 +149,6 @@
               <item name="TigerHacksDisplay" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Objects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="THDisplay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="THDisplay" type="462c0819:PsiDirectoryNode" />
-              <item name="TigerHacksDisplay" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="THDisplay" type="b2602c69:ProjectViewProjectNode" />
@@ -395,7 +371,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26685000" />
+    <option name="totallyTimeSpent" value="26746000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3872" height="2192" extended-state="6" />
@@ -424,11 +400,33 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33211678" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -477,15 +474,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3400">
           <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#334#0" expanded="true" />
-            <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#addShapeCircle#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#testValues#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#initFullscreen#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#checkDevice#0;n#!!block;n#Display#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -500,7 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -530,15 +518,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#334#0" expanded="true" />
-            <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#addShapeCircle#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#testValues#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#initFullscreen#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#checkDevice#0;n#!!block;n#Display#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -567,7 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -583,15 +562,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#334#0" expanded="true" />
-            <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#addShapeCircle#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#testValues#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#initFullscreen#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#checkDevice#0;n#!!block;n#Display#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -613,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -629,15 +599,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#334#0" expanded="true" />
-            <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#addShapeCircle#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#testValues#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#initFullscreen#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#checkDevice#0;n#!!block;n#Display#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -667,7 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -685,15 +646,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#334#0" expanded="true" />
-            <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#addShapeCircle#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#testValues#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#initFullscreen#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#checkDevice#0;n#!!block;n#Display#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -734,15 +687,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
           <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#334#0" expanded="true" />
-            <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#addShapeCircle#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#testValues#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#initFullscreen#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#checkDevice#0;n#!!block;n#Display#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -784,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="747" column="0" lean-forward="false" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -821,7 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -837,30 +780,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Display.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="65" column="21" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#334#0" expanded="true" />
-            <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#addShapeCircle#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#testValues#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#initFullscreen#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#checkDevice#0;n#!!block;n#Display#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="440">
+          <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/TigerHacksDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state relative-caret-position="720">
+          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#379#380#0" expanded="true" />
