@@ -1,4 +1,4 @@
-package Tools;
+package Tools.Tools;
 
 /*
  * OpenSimplex Noise in Java.
