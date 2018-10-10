@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c93afee-30c3-41a9-8c28-dc7144d41f47" name="Default" comment="" />
+    <list default="true" id="9c93afee-30c3-41a9-8c28-dc7144d41f47" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Display.kt" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Display.kt" />
+      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/src/TigerHacksDisplay.java" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/TigerHacksDisplay.java" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,15 +17,12 @@
       <file leaf-file-name="Display.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Display.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="313">
+              <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
               <folding>
-                <element signature="e#0#57#0" expanded="true" />
-                <element signature="e#217#257#0" expanded="false" />
-                <element signature="e#306#346#0" expanded="false" />
-                <element signature="e#478#663#0" expanded="false" />
+                <element signature="e#0#201#0" expanded="true" />
                 <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-                <element signature="n#!!block;n#getWindowDimension#0;n#!!block;n#Display#0" expanded="false" />
+                <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -31,14 +31,12 @@
       <file leaf-file-name="TigerHacksDisplay.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/TigerHacksDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            <state relative-caret-position="536">
+              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#608#609#0" expanded="true" />
-                <element signature="e#649#650#0" expanded="true" />
-                <element signature="e#694#695#0" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
+                <element signature="e#855#856#0" expanded="true" />
+                <element signature="e#895#896#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,10 +105,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-14" />
-    <option name="y" value="1" />
-    <option name="width" value="1946" />
-    <option name="height" value="2173" />
+    <option name="width" value="1945" />
+    <option name="height" value="2160" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -355,19 +351,19 @@
       <workItem from="1539128724057" duration="2086000" />
       <workItem from="1539131199629" duration="5721000" />
       <workItem from="1539138930379" duration="859000" />
-      <workItem from="1539147011716" duration="624000" />
+      <workItem from="1539147011716" duration="8806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9290000" />
+    <option name="totallyTimeSpent" value="17472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3872" height="2192" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -391,7 +387,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -410,7 +405,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -420,12 +415,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
-            <element signature="e#217#257#0" expanded="false" />
-            <element signature="e#306#346#0" expanded="false" />
-            <element signature="e#478#663#0" expanded="false" />
+            <element signature="e#0#201#0" expanded="true" />
             <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#getWindowDimension#0;n#!!block;n#Display#0" expanded="false" />
+            <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -436,10 +428,8 @@
           <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -464,6 +454,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#2213#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -472,12 +465,9 @@
         <state relative-caret-position="720">
           <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
-            <element signature="e#217#257#0" expanded="false" />
-            <element signature="e#306#346#0" expanded="false" />
-            <element signature="e#478#663#0" expanded="false" />
+            <element signature="e#0#201#0" expanded="true" />
             <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#getWindowDimension#0;n#!!block;n#Display#0" expanded="false" />
+            <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -497,10 +487,8 @@
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -509,6 +497,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#2213#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -517,12 +508,9 @@
         <state relative-caret-position="880">
           <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
-            <element signature="e#217#257#0" expanded="false" />
-            <element signature="e#306#346#0" expanded="false" />
-            <element signature="e#478#663#0" expanded="false" />
+            <element signature="e#0#201#0" expanded="true" />
             <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#getWindowDimension#0;n#!!block;n#Display#0" expanded="false" />
+            <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -544,6 +532,25 @@
     <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/THDD.kt" />
     <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/THD.kt" />
     <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/AppStart.kt" />
+    <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Tools/Tools/Functions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#2213#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/TigerHacksDisplay.kt" />
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/GraphicsEnvironment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="361" column="19" lean-forward="false" selection-start-line="361" selection-start-column="19" selection-end-line="361" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -552,39 +559,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Tools/Tools/Functions.java">
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/Frame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        <state relative-caret-position="392">
+          <caret line="922" column="0" lean-forward="false" selection-start-line="922" selection-start-column="0" selection-end-line="922" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/TigerHacksDisplay.kt" />
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="1269" column="19" lean-forward="false" selection-start-line="1269" selection-start-column="19" selection-end-line="1269" selection-end-column="19" />
+          <folding>
+            <element signature="e#42225#42226#0" expanded="false" />
+            <element signature="e#42265#42266#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/GraphicsDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="351" column="18" lean-forward="false" selection-start-line="351" selection-start-column="18" selection-end-line="351" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/TigerHacksDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        <state relative-caret-position="536">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="747" column="0" lean-forward="false" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Display.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="313">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
-            <element signature="e#217#257#0" expanded="false" />
-            <element signature="e#306#346#0" expanded="false" />
-            <element signature="e#478#663#0" expanded="false" />
+            <element signature="e#0#201#0" expanded="true" />
             <element signature="n#!!block;n#resizeDisplay#0;n#!!block;n#Display#0" expanded="false" />
-            <element signature="n#!!block;n#getWindowDimension#0;n#!!block;n#Display#0" expanded="false" />
+            <element signature="n#!!block;n#chooseScreenDevice#0;n#!!block;n#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>
