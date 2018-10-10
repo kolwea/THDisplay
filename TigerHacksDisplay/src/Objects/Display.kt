@@ -3,8 +3,10 @@ import javafx.scene.Scene
 import javafx.scene.layout.Pane
 import javafx.scene.paint.Paint
 import javafx.scene.shape.Circle
-import java.awt.*
-import java.awt.event.WindowAdapter
+import java.awt.Dimension
+import java.awt.GraphicsDevice
+import java.awt.GraphicsEnvironment
+import java.awt.Window
 import javax.swing.JFrame
 import javax.swing.WindowConstants
 
@@ -16,7 +18,7 @@ class Display() {
     var panel: JFXPanel = JFXPanel() //JavaFX panel w/ Scene
     private var root: Pane = Pane() //Root Pane for drawing
 
-    lateinit var frameWindow: Window // make a window out of frame;
+    var frameWindow: Window // make a window out of frame;
 
     //Variables for width and height
     var width: Double = 0.0
@@ -25,10 +27,11 @@ class Display() {
     //INITIALIZER///////////////////////////////////////////////////////////////////////////////////////////////////////
 
     init {
-//        frame.add(panel)
         panel.scene = Scene(root, 500.0, 500.0)
-//        frame.pack()
-
+        frameWindow = Window(frame)
+//        frame.addWindowListener( listener? : WindowListener ->{
+//
+//        })
         addShapeCircle()
     }
 
@@ -60,7 +63,7 @@ class Display() {
         height = windowDimension.getHeight()
         println(width.toString() + " " + height)
 
-        initFullscreen()
+//        initFullscreen()
 
         frame.minimumSize = Dimension(width.toInt(), height.toInt())
         panel.minimumSize = Dimension(width.toInt(), height.toInt())
@@ -91,9 +94,8 @@ class Display() {
         if (checkDevice(myDevice)) {
             frame.isUndecorated = true
             frame.ignoreRepaint = true
-            myDevice.fullScreenWindow = Window(frame)
+            myDevice.fullScreenWindow = frameWindow
         }
-
         frame.isVisible = false;
         frame.defaultCloseOperation = WindowConstants.HIDE_ON_CLOSE
         frame.add(panel)
@@ -119,9 +121,6 @@ class Display() {
         return device.isFullScreenSupported
     }
 
-    private fun setupFrame(){
-        frame.addWindowListener(})
-    }
 
 //    private fun getDisplaySettings(device:GraphicsDevice):DisplayMode{
 //        var dispMode = DisplayMode(device.win)
