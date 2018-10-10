@@ -4,63 +4,50 @@ import javafx.scene.layout.Pane
 import javafx.scene.paint.Paint
 import javafx.scene.shape.Circle
 import java.awt.*
+import java.awt.event.WindowAdapter
 import javax.swing.JFrame
+import javax.swing.WindowConstants
 
-class Display(){
+class Display() {
 
 
     //RootPane for the display
-    var frame : JFrame
-    var panel: JFXPanel
-    var root : Pane
-    var window : Window
+    var frame: JFrame = JFrame() //wrapping frame
+    var panel: JFXPanel = JFXPanel() //JavaFX panel w/ Scene
+    private var root: Pane = Pane() //Root Pane for drawing
+
+    lateinit var frameWindow: Window // make a window out of frame;
 
     //Variables for width and height
     var width: Double = 0.0
-
     var height: Double = 0.0
 
     //INITIALIZER///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    init{
-        var dimension = getWindowDimension();
+    init {
+//        frame.add(panel)
+        panel.scene = Scene(root, 500.0, 500.0)
+//        frame.pack()
 
-        frame = JFrame()
-        panel = JFXPanel();
-        root = Pane();
-        window = Window(frame)
+        addShapeCircle()
+    }
 
-        //
+    //PUBLIC FUNCTIONS//////////////////////////////////////////////////////////////////////////////////////////////////
+
+    fun resizeDisplay(widthVal: Double, heightVal: Double) {
+        this.width = width;
+        this.height = height;
+        updateDisplay();
+    }
+
+    fun addShapeCircle() {
         var circ = Circle()
         circ.radius = 400.0
         circ.centerY = height
         circ.centerX = width
         circ.fill = Paint
                 .valueOf("Red")
-
         root.children.addAll(circ)
-        //
-        width = dimension!!.getWidth();
-        height = dimension.getHeight();
-        println(width.toString() + " " + height)
-
-        frame.minimumSize = Dimension(Math.round(width).toInt(), Math.round(height).toInt())
-        panel.minimumSize = Dimension(Math.round(width).toInt(), Math.round(height).toInt())
-        root.setMinSize(width,height)
-
-        frame.add(panel);
-        panel.scene = Scene(root,width,height)
-        frame.pack()
-
-        initFullscreen();
-    }
-
-    //PUBLIC FUNCTIONS//////////////////////////////////////////////////////////////////////////////////////////////////
-
-    fun resizeDisplay(widthVal : Double, heightVal : Double){
-        this.width = width;
-        this.height = height;
-        updateDisplay();
     }
 
 
@@ -68,18 +55,24 @@ class Display(){
 
 
     fun updateDisplay() {
-        var window = getWindowDimension()
-        width = window!!.getWidth()
-        height = window.getHeight()
+        var windowDimension = getWindowDimension()
+        width = windowDimension!!.getWidth()
+        height = windowDimension.getHeight()
+        println(width.toString() + " " + height)
+
         initFullscreen()
+
+        frame.minimumSize = Dimension(width.toInt(), height.toInt())
+        panel.minimumSize = Dimension(width.toInt(), height.toInt())
+        root.setMinSize(width, height)
     }
 
-    private fun getWindowDimension(): Dimension?{
+    private fun getWindowDimension(): Dimension? {
         var windowDimension = java.awt.Toolkit.getDefaultToolkit().screenSize;
         return windowDimension;
     }
 
-    private fun testValues(){
+    private fun testValues() {
         println("RootPane = " + root);
         println("Window Width: " + width);
         println("Window Height: " + height);
@@ -89,33 +82,45 @@ class Display(){
 
     //Functions for fullscreen setup
 
-    lateinit var myDevice : GraphicsDevice;
-    lateinit var screenDevices:Array<GraphicsDevice>;
+    lateinit var myDevice: GraphicsDevice;
+    lateinit var screenDevices: Array<GraphicsDevice>;
 
-    private fun initFullscreen(){
-        screenDevices = GraphicsEnvironment.getLocalGraphicsEnvironment().screenDevices;
+    private fun initFullscreen() {
+        screenDevices = GraphicsEnvironment.getLocalGraphicsEnvironment().screenDevices
         chooseScreenDevice()
-        if(checkDevice(myDevice)){
-            frame.isUndecorated = true;
-            frame.ignoreRepaint = true;
-            myDevice.fullScreenWindow = window;
+        if (checkDevice(myDevice)) {
+            frame.isUndecorated = true
+            frame.ignoreRepaint = true
+            myDevice.fullScreenWindow = Window(frame)
         }
 
+        frame.isVisible = false;
+        frame.defaultCloseOperation = WindowConstants.HIDE_ON_CLOSE
+        frame.add(panel)
+        frame.pack()
     }
 
-    private fun chooseScreenDevice(){
-        if(screenDevices!=null) {
+    private fun chooseScreenDevice() {
+        if (screenDevices != null) {
             for (device in screenDevices) {
                 println(device.iDstring)
-                if(device.iDstring.contains("Display0")){
+                if (device.iDstring.contains("Display0")) {
                     myDevice = device
+                    println()
+                    println(myDevice.iDstring)
                 }
             }
+        } else {
+            println("its null")
         }
     }
 
-    private fun checkDevice(device:GraphicsDevice) : Boolean {
-        return device.isFullScreenSupported && device.isDisplayChangeSupported;
+    private fun checkDevice(device: GraphicsDevice): Boolean {
+        return device.isFullScreenSupported
+    }
+
+    private fun setupFrame(){
+        frame.addWindowListener(})
     }
 
 //    private fun getDisplaySettings(device:GraphicsDevice):DisplayMode{
