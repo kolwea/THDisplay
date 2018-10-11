@@ -62,9 +62,9 @@ class Display() {
 
 //        initFullscreen()
 
-        frame.minimumSize = Dimension(width.toInt(), height.toInt())
-        panel.minimumSize = Dimension(width.toInt(), height.toInt())
-        root.setMinSize(width, height)
+        frame.preferredSize = Dimension(width.toInt(), height.toInt())
+        panel.preferredSize = Dimension(width.toInt(), height.toInt())
+        root.setPrefSize(width, height)
     }
 
     private fun getWindowDimension(): Dimension? {

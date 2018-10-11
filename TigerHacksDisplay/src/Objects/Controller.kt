@@ -7,12 +7,16 @@ class Controller(private var rootPane: Pane){
 
     var width = 0.0
     var height = 0.0
-    var timekeeper : TimeKeeper
+    private val timekeeper : TimeKeeper
+    private val nodePoints : NodePoints
 
     init{
         width = rootPane.width
         height = rootPane.height
         timekeeper = TimeKeeper()
+        nodePoints = NodePoints()
+        nodePoints.setPane(rootPane)
+        nodePoints.setRandomPositions()
     }
 
     fun start(){

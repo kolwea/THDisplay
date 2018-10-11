@@ -30,6 +30,6 @@ class TimeKeeper {
     }
 
     private fun update() {
-        println(count++)
+//        println(count++)
     }
 }

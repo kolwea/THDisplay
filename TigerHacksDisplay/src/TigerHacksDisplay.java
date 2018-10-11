@@ -5,6 +5,8 @@ import javafx.stage.Stage;
 
 import javax.swing.*;
 
+import static sun.misc.Version.println;
+
 public class TigerHacksDisplay extends Application {
     Display disp;
     Controller cont;
