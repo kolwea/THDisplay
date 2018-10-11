@@ -3,34 +3,34 @@ package Objects
 import javafx.scene.paint.Paint
 import javafx.scene.shape.Circle
 
-class Point{
-    var x = 0.0
-    var y = 0.0
-    var radius = 50.0
-    var body : Circle
-    var index : Int = 0
+class Point {
+    var x = 200.0
+    var y = 100.0
+    var radius = 100.0
+    var body: Circle = Circle()
+    var index: Int = 0
 
-    init{
-        body = Circle()
+    init {
         body.centerX = x;
         body.centerY = y;
         body.radius = radius
-        body.fill = Paint.valueOf("Blue")
+        body.fill= Paint.valueOf("Blue")
     }
 
-    fun setRandomPosition(width : Double, height : Double){
-        val randomX = Math.random() * (width - (-width)) + (-width)/2
-        val randomY = Math.random() * (height - (-height)) + (-height)/2
-        this.updatePosition(randomX,randomY)
+    fun setRandomPosition(width: Double, height: Double) {
+        val randomX = Math.random() * (width - (-width)) + (-width)
+        val randomY = Math.random() * (height - (-height)) + (-height)
+        this.updatePosition(randomX, randomY)
     }
 
-    fun updatePosition(x :Double, y : Double){
+    fun updatePosition(x: Double, y: Double) {
         this.x = x
         this.y = y
-        body.centerX = x
-        body.centerY = y
+        body.centerX = this.x
+        body.centerY = this.y
 
-        println(x + y)
+        if (index == 0)
+            println("X: " + this.x + " Y: " + this.y)
     }
 
 }

@@ -3,54 +3,71 @@ package Objects
 import javafx.scene.Scene
 import javafx.scene.layout.Pane
 import javafx.scene.shape.Circle
+import java.awt.Dimension
 
-class Controller() {
+class Controller(val rootPane: Pane){
 
-    private var width: Double
-    private var height: Double
+    var dimension = this.getWindowDimension()
 
-    private val rootPane: Pane;
+    var width: Double = dimension.getWidth()
+    var height: Double = dimension.getHeight()
+
+
     private val timekeeper: TimeKeeper
-    private var nodes: NodePoints
-    private val display: Display = Display()
+    private val nodes: NodePoints
+    private val display: Display
 
     private var circle = Circle()
+     var change : Double = 1.0
 
     init {
-        rootPane = display.root
-        width = rootPane.width
-        height = rootPane.height
+        display = Display(this)
         timekeeper = TimeKeeper(this)
-        nodes = NodePoints()
-        nodes.setPane(rootPane)
+        nodes = NodePoints(this)
+
+
         addCircle()
     }
 
     fun start() {
-        timekeeper.start();
+        timekeeper.start()
+    }
+
+    fun setupStart(){
+        width = rootPane.width
+        height = rootPane.height
     }
 
     fun update() {
         nodes.setRandomPositions()
-        var newVal = 0.0
-        if (circle?.radius!! >= 0)
-            newVal = circle?.radius!!.toDouble() - 25.0
-        else
-            newVal = circle?.radius!!.toDouble() + 25.0
+
+        var newVal: Double = circle.radius + change
+
+        if(circle.radius == 0.0) {
+             change = 1.0
+         }
+        if(circle.radius == 300.0) {
+            change = -1.0
+        }
+        circle.radius = newVal
+
     }
 
-    fun getScene():Scene{
-        return display.panel.scene
+    private fun getWindowDimension(): Dimension {
+        var windowDimension = java.awt.Toolkit.getDefaultToolkit().screenSize;
+        return windowDimension;
     }
 
 
     private fun addCircle() {
         if (width != null && height != null) {
-            circle.centerX = width / 2
+            circle.centerX = width /2
             circle.centerY = height / 2
-            circle.radius = 200.0
-            rootPane.children.addAll(circle)
+            circle.radius = 300.0
+            rootPane.children.add(circle)
         }
     }
+
+
 
 }

@@ -9,27 +9,21 @@ import java.awt.*
 import javax.swing.JFrame
 import javax.swing.WindowConstants
 
-public class Display{
+public class Display(var controller:Controller){
 
+//
+//    var frame: JFrame = JFrame() //wrapping frame
+//    var panel: JFXPanel = JFXPanel() //JavaFX panel w/ Scene
+    var root: Pane = controller.rootPane //Root Pane for drawing
 
-    var frame: JFrame = JFrame() //wrapping frame
-    var panel: JFXPanel = JFXPanel() //JavaFX panel w/ Scene
-    var root: Pane = Pane() //Root Pane for drawing
-
-    var frameWindow: Window // make a window out of frame;
-
-    var width: Double = 0.0
-    var height: Double = 0.0
+    var width: Double = controller.width
+    var height: Double = controller.height
 
 
     init {
-        panel.scene = Scene(root, 500.0, 500.0)
-        frameWindow = Window(frame)
-
-        frame.contentPane.background = Color.green
         root.stylesheets.add("Stylesheets/style.css")
-        root.styleClass.add("start-background")
-        addShapeCircle()
+        root.styleClass.add("header")
+        println(width + height)
     }
 
 
@@ -54,22 +48,15 @@ public class Display{
 
 
     fun updateDisplay() {
-        var windowDimension = getWindowDimension()
-        width = windowDimension!!.getWidth()
-        height = windowDimension.getHeight()
-        println(width.toString() + " " + height)
+//        var windowDimension = getWindowDimension()
+//        width = windowDimension.getWidth()
+//        height = windowDimension.getHeight()
 
 //        initFullscreen()
-
-        frame.preferredSize = Dimension(width.toInt(), height.toInt())
-        panel.preferredSize = Dimension(width.toInt(), height.toInt())
-        root.setPrefSize(width, height)
+//        root.setPrefSize(width, height)
     }
 
-    private fun getWindowDimension(): Dimension? {
-        var windowDimension = java.awt.Toolkit.getDefaultToolkit().screenSize;
-        return windowDimension;
-    }
+
 
     private fun testValues() {
         println("RootPane = " + root);
@@ -81,37 +68,37 @@ public class Display{
 
     //Functions for fullscreen setup
 
-    lateinit var myDevice: GraphicsDevice;
-    lateinit var screenDevices: Array<GraphicsDevice>;
-
-    private fun initFullscreen() {
-        screenDevices = GraphicsEnvironment.getLocalGraphicsEnvironment().screenDevices
-        chooseScreenDevice()
-        if (checkDevice(myDevice)) {
-            frame.isUndecorated = true
-            frame.ignoreRepaint = true
-            myDevice.fullScreenWindow = frameWindow
-        }
-        frame.isVisible = false;
-        frame.defaultCloseOperation = WindowConstants.HIDE_ON_CLOSE
-        frame.add(panel)
-        frame.pack()
-    }
-
-    private fun chooseScreenDevice() {
-        if (screenDevices != null) {
-            for (device in screenDevices) {
-                println(device.iDstring)
-                if (device.iDstring.contains("Display0")) {
-                    myDevice = device
-                    println()
-                    println(myDevice.iDstring)
-                }
-            }
-        } else {
-            println("its null")
-        }
-    }
+//    lateinit var myDevice: GraphicsDevice;
+//    lateinit var screenDevices: Array<GraphicsDevice>;
+//
+//    private fun initFullscreen() {
+//        screenDevices = GraphicsEnvironment.getLocalGraphicsEnvironment().screenDevices
+//        chooseScreenDevice()
+//        if (checkDevice(myDevice)) {
+//            frame.isUndecorated = true
+//            frame.ignoreRepaint = true
+//            myDevice.fullScreenWindow = frameWindow
+//        }
+//        frame.isVisible = false;
+//        frame.defaultCloseOperation = WindowConstants.HIDE_ON_CLOSE
+//        frame.add(panel)
+//        frame.pack()
+//    }
+//
+//    private fun chooseScreenDevice() {
+//        if (screenDevices != null) {
+//            for (device in screenDevices) {
+//                println(device.iDstring)
+//                if (device.iDstring.contains("Display0")) {
+//                    myDevice = device
+//                    println()
+//                    println(myDevice.iDstring)
+//                }
+//            }
+//        } else {
+//            println("its null")
+//        }
+//    }
 
     private fun checkDevice(device: GraphicsDevice): Boolean {
         return device.isFullScreenSupported

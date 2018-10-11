@@ -3,37 +3,29 @@ package Objects
 import javafx.scene.layout.Pane
 import javafx.scene.shape.Circle
 
-class NodePoints() {
+class NodePoints(var controller : Controller) {
 
     var width = 0.0
     var height = 0.0
-    var points: Array<Point?> = arrayOf<Point?>()
-    val size = 100;
+    var points: ArrayList<Point> = arrayListOf<Point>()
+    val size = 100
 
     init {
-        points = arrayOfNulls<Point>(size)
+        width = controller.width
+        height = controller.height
         for (i in 0..size-1){
-            val hold = Point()
+            var hold = Point()
             hold.body = Circle()
             hold.index = i
-            points[i] = hold
-            println("Point - " + hold.index)
+            points.add(hold)
+            controller.rootPane.children.add(hold.body)
         }
     }
 
-    fun setPane(rootPane: Pane) {
-            for (point in points) {
-                rootPane.children.remove(point?.body)
-                rootPane.children.add(point?.body)
-            width = rootPane.width
-            height = rootPane.height
-            println("Pane set for points.")
-        }
-    }
 
     fun setRandomPositions() {
         for (point in points) {
-            point?.setRandomPosition(width, height)
+            point.setRandomPosition(width, height)
         }
     }
 

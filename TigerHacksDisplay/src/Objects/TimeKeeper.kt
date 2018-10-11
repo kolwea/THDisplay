@@ -14,7 +14,6 @@ class TimeKeeper (host:Controller?){
     var count = 0.0
     var controller : Controller?
 
-    var updateFunction: Unit? = null
 
     init {
         setupTimeline()
@@ -30,7 +29,6 @@ class TimeKeeper (host:Controller?){
         keyframe = KeyFrame(Duration.millis(10.0),event)
         timeline = Timeline(keyframe)
         timeline.setCycleCount(Animation.INDEFINITE)
-        timeline.play()
     }
 
     private fun update(){
