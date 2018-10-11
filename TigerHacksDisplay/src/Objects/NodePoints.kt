@@ -13,7 +13,7 @@ class NodePoints() {
         points = arrayOfNulls<Point>(size)
         points.fill(Point(), 0, size)
         for (i in 0..size - 1) {
-            var point = points?.get(i)
+            var point = points.get(i)
             point?.index = i
             println(point?.index)
         }
