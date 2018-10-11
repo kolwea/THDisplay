@@ -15,6 +15,7 @@ public class TigerHacksDisplay extends Application {
     public void start(Stage primaryStage) throws Exception {
         Pane rootPane = new Pane();
         controller = new Controller(rootPane);
+        controller.addCircle();
         controller.start();
 
         Scene scene = new Scene(rootPane,controller.getWidth(),controller.getHeight());
