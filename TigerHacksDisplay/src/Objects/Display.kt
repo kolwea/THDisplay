@@ -1,38 +1,37 @@
+package Objects
+
 import javafx.embed.swing.JFXPanel
 import javafx.scene.Scene
 import javafx.scene.layout.Pane
 import javafx.scene.paint.Paint
 import javafx.scene.shape.Circle
-import java.awt.Dimension
-import java.awt.GraphicsDevice
-import java.awt.GraphicsEnvironment
-import java.awt.Window
+import java.awt.*
 import javax.swing.JFrame
 import javax.swing.WindowConstants
 
-class Display() {
+public class Display{
 
 
-    //RootPane for the display
     var frame: JFrame = JFrame() //wrapping frame
     var panel: JFXPanel = JFXPanel() //JavaFX panel w/ Scene
     var root: Pane = Pane() //Root Pane for drawing
 
     var frameWindow: Window // make a window out of frame;
 
-    //Variables for width and height
     var width: Double = 0.0
     var height: Double = 0.0
 
-    //INITIALIZER///////////////////////////////////////////////////////////////////////////////////////////////////////
 
     init {
         panel.scene = Scene(root, 500.0, 500.0)
         frameWindow = Window(frame)
-//        addShapeCircle()
+
+        frame.contentPane.background = Color.green
+        root.stylesheets.add("Stylesheets/style.css")
+        root.styleClass.add("start-background")
+        addShapeCircle()
     }
 
-    //PUBLIC FUNCTIONS//////////////////////////////////////////////////////////////////////////////////////////////////
 
     fun resizeDisplay(widthVal: Double, heightVal: Double) {
         this.width = width;
@@ -40,16 +39,16 @@ class Display() {
         updateDisplay();
     }
 
-//    fun addShapeCircle() {
-//        var circ = Circle()
-//        circ.radius = 400.0
-//        circ.centerY = height
-//        circ.centerX = width
-//        circ.fill = Paint
-//                .valueOf("Red")
-//        root.children.addAll(circ)
-//    }
-//
+    fun addShapeCircle() {
+        var circ = Circle()
+        circ.radius = 400.0
+        circ.centerY = height
+        circ.centerX = width
+        circ.fill = Paint
+                .valueOf("Red")
+        root.children.addAll(circ)
+    }
+
 
     //PRIVATE FUNCTIONS/////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -119,9 +118,6 @@ class Display() {
     }
 
 
-//    private fun getDisplaySettings(device:GraphicsDevice):DisplayMode{
-//        var dispMode = DisplayMode(device.win)
-//    }
 
 
 }

@@ -6,7 +6,7 @@ import javafx.scene.shape.Circle
 class Point{
     var x = 0.0
     var y = 0.0
-    var radius = 10.0
+    var radius = 50.0
     var body : Circle
     var index : Int = 0
 
@@ -19,8 +19,9 @@ class Point{
     }
 
     fun setRandomPosition(width : Double, height : Double){
-        val randomX = Math.random() * height
-        val randomY = Math.random() * width
+        val randomX = Math.random() * (width - (-width)) + (-width)/2
+        val randomY = Math.random() * (height - (-height)) + (-height)/2
+        this.updatePosition(randomX,randomY)
     }
 
     fun updatePosition(x :Double, y : Double){
@@ -28,6 +29,8 @@ class Point{
         this.y = y
         body.centerX = x
         body.centerY = y
+
+        println(x + y)
     }
 
 }

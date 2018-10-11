@@ -1,6 +1,7 @@
 package Objects
 
 import javafx.scene.layout.Pane
+import javafx.scene.shape.Circle
 
 class NodePoints() {
 
@@ -11,20 +12,19 @@ class NodePoints() {
 
     init {
         points = arrayOfNulls<Point>(size)
-        points.fill(Point(), 0, size)
-        for (i in 0..size - 1) {
-            var point = points.get(i)
-            point?.index = i
-            println(point?.index)
+        for (i in 0..size-1){
+            val hold = Point()
+            hold.body = Circle()
+            hold.index = i
+            points[i] = hold
+            println("Point - " + hold.index)
         }
     }
 
-    fun setPane(rootPane: Pane?) {
-        if (rootPane != null) {
+    fun setPane(rootPane: Pane) {
             for (point in points) {
-                rootPane?.children.remove(point?.body)
-                rootPane?.children.add(point?.body)
-            }
+                rootPane.children.remove(point?.body)
+                rootPane.children.add(point?.body)
             width = rootPane.width
             height = rootPane.height
             println("Pane set for points.")
@@ -34,6 +34,12 @@ class NodePoints() {
     fun setRandomPositions() {
         for (point in points) {
             point?.setRandomPosition(width, height)
+        }
+    }
+
+    fun setNodePositions(x:Double,y:Double){
+        for (point in points){
+            point?.updatePosition(x,y)
         }
     }
 

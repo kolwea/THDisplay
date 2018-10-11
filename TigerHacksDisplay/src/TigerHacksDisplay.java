@@ -8,24 +8,17 @@ import javax.swing.*;
 import static sun.misc.Version.println;
 
 public class TigerHacksDisplay extends Application {
-    Display disp;
-    Controller cont;
+    Controller controller;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        disp = new Display();
-        disp.updateDisplay();
+        controller = new Controller();
+        controller.start();
 
-        Scene scene = disp.getPanel().getScene();
+        Scene scene = controller.getScene();
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        cont = new Controller(disp.getRoot());
-        cont.start();
-    }
-
-    private void initDisplay(){
-        this.disp = new Display();
     }
 
     public static void main(String[] args){

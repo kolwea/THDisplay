@@ -1,33 +1,56 @@
 package Objects
 
+import javafx.scene.Scene
 import javafx.scene.layout.Pane
 import javafx.scene.shape.Circle
 
-class Controller(private var rootPane: Pane){
+class Controller() {
 
-    var width = 0.0
-    var height = 0.0
-    private val timekeeper : TimeKeeper
-    private val nodePoints : NodePoints
+    private var width: Double
+    private var height: Double
 
-    init{
+    private val rootPane: Pane;
+    private val timekeeper: TimeKeeper
+    private var nodes: NodePoints
+    private val display: Display = Display()
+
+    private var circle = Circle()
+
+    init {
+        rootPane = display.root
         width = rootPane.width
         height = rootPane.height
-        timekeeper = TimeKeeper()
-        nodePoints = NodePoints()
-        nodePoints.setPane(rootPane)
-        nodePoints.setRandomPositions()
+        timekeeper = TimeKeeper(this)
+        nodes = NodePoints()
+        nodes.setPane(rootPane)
+        addCircle()
     }
 
-    fun start(){
+    fun start() {
         timekeeper.start();
     }
 
-    private fun addCircle(){
-        val circ = Circle()
-        circ.centerX = width/2
-        circ.centerY = height/2
-        circ.radius = 200.0
-        rootPane.children.addAll(circ)
+    fun update() {
+        nodes.setRandomPositions()
+        var newVal = 0.0
+        if (circle?.radius!! >= 0)
+            newVal = circle?.radius!!.toDouble() - 25.0
+        else
+            newVal = circle?.radius!!.toDouble() + 25.0
     }
+
+    fun getScene():Scene{
+        return display.panel.scene
+    }
+
+
+    private fun addCircle() {
+        if (width != null && height != null) {
+            circle.centerX = width / 2
+            circle.centerY = height / 2
+            circle.radius = 200.0
+            rootPane.children.addAll(circle)
+        }
+    }
+
 }
