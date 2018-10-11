@@ -16,7 +16,7 @@ class Display() {
     //RootPane for the display
     var frame: JFrame = JFrame() //wrapping frame
     var panel: JFXPanel = JFXPanel() //JavaFX panel w/ Scene
-    private var root: Pane = Pane() //Root Pane for drawing
+    var root: Pane = Pane() //Root Pane for drawing
 
     var frameWindow: Window // make a window out of frame;
 
@@ -29,7 +29,7 @@ class Display() {
     init {
         panel.scene = Scene(root, 500.0, 500.0)
         frameWindow = Window(frame)
-        addShapeCircle()
+//        addShapeCircle()
     }
 
     //PUBLIC FUNCTIONS//////////////////////////////////////////////////////////////////////////////////////////////////
@@ -40,16 +40,16 @@ class Display() {
         updateDisplay();
     }
 
-    fun addShapeCircle() {
-        var circ = Circle()
-        circ.radius = 400.0
-        circ.centerY = height
-        circ.centerX = width
-        circ.fill = Paint
-                .valueOf("Red")
-        root.children.addAll(circ)
-    }
-
+//    fun addShapeCircle() {
+//        var circ = Circle()
+//        circ.radius = 400.0
+//        circ.centerY = height
+//        circ.centerX = width
+//        circ.fill = Paint
+//                .valueOf("Red")
+//        root.children.addAll(circ)
+//    }
+//
 
     //PRIVATE FUNCTIONS/////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -62,9 +62,9 @@ class Display() {
 
 //        initFullscreen()
 
-        frame.minimumSize = Dimension(width.toInt(), height.toInt())
-        panel.minimumSize = Dimension(width.toInt(), height.toInt())
-        root.setMinSize(width, height)
+        frame.preferredSize = Dimension(width.toInt(), height.toInt())
+        panel.preferredSize = Dimension(width.toInt(), height.toInt())
+        root.setPrefSize(width, height)
     }
 
     private fun getWindowDimension(): Dimension? {
