@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c93afee-30c3-41a9-8c28-dc7144d41f47" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/NodePoints.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Point.kt" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/Display.class" afterPath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/Display.class" />
-      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/Objects/Controller.class" afterPath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/Objects/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/Objects/TimeKeeper.class" afterPath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/Objects/TimeKeeper.class" />
-      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/TigerHacksDisplay.class" afterPath="$PROJECT_DIR$/TigerHacksDisplay/output/production/TigerHacksDisplay/TigerHacksDisplay.class" />
-      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Controller.kt" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Controller.kt" />
-      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Display.kt" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Display.kt" />
-      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/TimeKeeper.kt" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/Objects/TimeKeeper.kt" />
-      <change beforePath="$PROJECT_DIR$/TigerHacksDisplay/src/TigerHacksDisplay.java" afterPath="$PROJECT_DIR$/TigerHacksDisplay/src/TigerHacksDisplay.java" />
-    </list>
+    <list default="true" id="9c93afee-30c3-41a9-8c28-dc7144d41f47" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,66 +26,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Controller.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-              <folding>
-                <element signature="e#17#81#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TigerHacksDisplay.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TigerHacksDisplay.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/TigerHacksDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="960">
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="e#638#639#0" expanded="true" />
                 <element signature="e#679#680#0" expanded="true" />
                 <element signature="e#724#725#0" expanded="true" />
                 <element signature="e#764#765#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NodePoints.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/NodePoints.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding>
-                <element signature="e#193#426#0" expanded="false" />
-                <element signature="n#!!block;n#setPane#0;n#!!block;n#NodePoints#0" expanded="false" />
-                <element signature="n#!!block;n#setRandomPositions#0;n#!!block;n#NodePoints#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Point.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/Point.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-              <folding>
-                <element signature="e#17#81#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeKeeper.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/TimeKeeper.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="811">
-              <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-              <folding>
-                <element signature="e#17#209#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -424,7 +362,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35878000" />
+    <option name="totallyTimeSpent" value="35895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3872" height="2192" extended-state="6" />
@@ -551,7 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -559,7 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -593,7 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -601,7 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -635,7 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -643,7 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -651,9 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#2213#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,9 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#2213#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -728,9 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#2213#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,7 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,34 +719,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/FrameFactory.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/FrameFactory.kt" />
     <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/TimeKeeper.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/TimeKeeper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/Objects/TimeKeeper.java" />
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_161/javafx-src.zip!/javafx/animation/KeyFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -848,16 +753,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="811">
           <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-          <folding>
-            <element signature="e#17#209#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TigerHacksDisplay/src/TigerHacksDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="960">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="e#638#639#0" expanded="true" />
             <element signature="e#679#680#0" expanded="true" />
