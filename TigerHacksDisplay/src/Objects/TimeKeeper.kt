@@ -7,17 +7,14 @@ import javafx.event.ActionEvent
 import javafx.event.EventHandler
 import javafx.util.Duration
 
-class TimeKeeper (host:Controller?){
+class TimeKeeper (private val controller:Controller){
 
     lateinit var keyframe : KeyFrame
     lateinit var timeline : Timeline
     var count = 0.0
-    var controller : Controller?
-
 
     init {
         setupTimeline()
-        controller = host
     }
 
     fun start(){
@@ -31,8 +28,8 @@ class TimeKeeper (host:Controller?){
         timeline.setCycleCount(Animation.INDEFINITE)
     }
 
-    private fun update(){
-        controller?.update()
+    fun update(){
+        controller.update()
     }
 
 

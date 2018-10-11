@@ -1,30 +1,44 @@
 package Objects
 
-import javafx.scene.shape.Circle
+import javafx.scene.layout.Pane
 
-class NodePoints(var controller: Controller) {
+class NodePoints(var width : Double, var height :Double) {
 
-    var width = 0.0
-    var height = 0.0
     var points: ArrayList<Point> = arrayListOf<Point>()
-    var count = 100
-    var pointRadius = 25.0
+    var pointRadius = 100.0
         set(value) {
             setAllPointRadius(value)
         }
+
     init {
-        width = controller.width
-        height = controller.height
+
+        print("NodePoints created with ")
+        print("Points:${points.size} ")
+        println("Width:${width} Height:${height}")
+    }
+
+    fun createPoints(count:Int){
         for (i in 0 until count) {
             var hold = Point()
             hold.index = i
-            hold.setPosition(0.0, 0.0)
             hold.radius = pointRadius
             points.add(hold)
-            controller.rootPane.children.add(hold.body)
         }
     }
 
+    fun createNewPoint(xPos:Double,yPos:Double){
+        val hold = Point()
+        hold.setPosition(xPos,yPos)
+        hold.radius = pointRadius
+        hold.index = points.count()-1
+        points.add(hold)
+    }
+
+    fun addPointsToPane(rootPane : Pane){
+        for(point in points) {
+            rootPane.children.add(point.body)
+        }
+    }
 
     fun setRandomPositions() {
         for (point in points) {
@@ -41,6 +55,7 @@ class NodePoints(var controller: Controller) {
     fun setAllPointRadius(rad : Double){
         for(point in points){
             point.radius = rad
+            point.update()
         }
     }
 
@@ -48,6 +63,7 @@ class NodePoints(var controller: Controller) {
         val randomX = Math.random() * width
         val randomY = Math.random() * height
         point.setPosition(randomX, randomY)
+//        println("Random X:$randomX Y:$randomY")
     }
 
 

@@ -13,12 +13,13 @@ public class TigerHacksDisplay extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Pane rootPane = new Pane();
-        controller = new Controller(rootPane);
+        controller = new Controller();
+        Pane rootPane = controller.getRootPane();
         controller.addCircle();
         controller.start();
 
         Scene scene = new Scene(rootPane,controller.getWidth(),controller.getHeight());
+        scene.getStylesheets().add("/Stylesheets/style.css");
         primaryStage.setScene(scene);
         primaryStage.show();
 
