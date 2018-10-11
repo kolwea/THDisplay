@@ -1,14 +1,21 @@
 package Objects.Background
 
 import Objects.NodePoints
+import com.sun.org.apache.xpath.internal.operations.Bool
+import javafx.scene.Node
 import javafx.scene.layout.Pane
+import javafx.scene.paint.Color
+import javafx.scene.shape.Circle
+import javafx.scene.shape.Polygon
 import javafx.scene.shape.Rectangle
 
 class DisplayBackground(var width: Double, var height: Double) {
 
     var rootPane: Pane = Pane()
 
-    private val size = 55.0
+    private val size = 25.0
+    private val padding = 10.0
+    private val extraHex = 3
     private val horzSpacing = size * Math.sqrt(3.0)
     private val vertSpacing = size * 2
 
@@ -29,12 +36,6 @@ class DisplayBackground(var width: Double, var height: Double) {
     }
 
     private fun setupHexPane() {
-//        var hex = Hexagon(500.0,500.0, size)
-//        for (coord in hex.hexPoints){
-//            nodePoints.createNewPoint(coord.first,coord.second)
-//            println("X: ${coord.first} Y: ${coord.second}")
-//        }
-//        nodePoints.addPointsToPane(hexPane)
         var maxWidthCount = Math.round(width / horzSpacing)
         var maxHeightCount = Math.round(height / vertSpacing)
 
@@ -42,16 +43,35 @@ class DisplayBackground(var width: Double, var height: Double) {
         println(maxWidthCount)
         println(maxHeightCount)
         println()
-        for (i in 0 until maxWidthCount) {
-            for (j in 0 until maxHeightCount) {
-                val hold = Hexagon(i * horzSpacing, j * vertSpacing, size)
-                for (coord in hold.hexPoints) {
-                    nodePoints.createNewPoint(coord.first, coord.second)
+        for (i in 0 - extraHex until maxWidthCount + extraHex) {
+            for (j in 0 - extraHex until maxHeightCount + extraHex) {
+                var hold: Hexagon
+                var xPos: Double = 0.0
+                var yPos: Double = 0.0
+                if (isEven(i)) {
+                    xPos = horzSpacing * i
+                    yPos = vertSpacing * j
+                } else {
+                    xPos = (horzSpacing * i)
+                    yPos = (vertSpacing * j) + vertSpacing / 2
                 }
+                hold = Hexagon(xPos, yPos, size)
+                if (isEven(i)) {
+                    hold.fill = Color.BLUE
+
+                    hold.updatePoints()
+                }
+
+                hexPane.children.add(hold.body)
+                println("even")
             }
         }
-        nodePoints.setAllPointRadius(5.0)
-        nodePoints.addPointsToPane(hexPane)
+
+    }
+
+    private fun isEven(i: Long): Boolean {
+        var k = i.toInt()
+        return (k % 2 == 0)
     }
 
 }
