@@ -1,21 +1,29 @@
 package Objects
 
 import Objects.Background.DisplayBackground
+import Objects.TigerHead.TigerHead
 import javafx.scene.layout.Pane
+import javafx.scene.layout.StackPane
 
 class Display(var width:Double ,var height:Double) {
 
     var root: Pane = Pane() //Root Pane for drawing
-//    var nodes : NodePoints = NodePoints(controller)
+
+    var tigerHeadScale = 125.0
 
     private lateinit var background : DisplayBackground
     private lateinit var backgroundRootPane : Pane
+
+    private lateinit var tigerHead : TigerHead
+    private lateinit var tigerHeadPane : StackPane
 
     init {
         root.setPrefSize(width, height)
         println("Display width:$width height:$height")
 
         setupBackground()
+        setupTigerHead()
+
         root.styleClass.add("display")
         println("Display created with Prefsize: (${root.prefWidth}, ${root.prefHeight})")
     }
@@ -40,6 +48,13 @@ class Display(var width:Double ,var height:Double) {
         background = DisplayBackground(width,height)
         backgroundRootPane = background.rootPane
         root.children.add(backgroundRootPane)
+    }
+
+    private fun setupTigerHead(){
+        tigerHead = TigerHead(tigerHeadScale)
+        tigerHeadPane = tigerHead.rootPane
+        root.children.add(tigerHeadPane)
+        tigerHeadPane.translateX = 50.0
     }
 
 

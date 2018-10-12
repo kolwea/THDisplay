@@ -9,3 +9,19 @@
     -fx-background-color: #eaea91;
 }
 
+.TH-Orange{
+    -fx-background-color: #F8993A;
+    -fx-fill: #F8993A;
+}
+
+.TH-Tan{
+    -fx-background-color: #FEF8E2;
+}
+
+.TH-Black{
+    -fx-background-color: #333132
+}
+
+.TH-Blue{
+    -fx-background-color: #C5E5D5
+}

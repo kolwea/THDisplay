@@ -1,7 +1,5 @@
 package Objects.Background
 
-import javafx.scene.Node
-import javafx.scene.layout.Pane
 import javafx.scene.paint.Color
 import javafx.scene.paint.Paint
 import javafx.scene.shape.Line
@@ -24,14 +22,15 @@ class Hexagon(var centerX: Double,var centerY: Double ,size:Double) {
         set(value) {
             updatePoints()
         }
-
-    var fill: Paint = Color.GREEN
-    var stroke: Paint = Color.BLACK
+    var fill: Paint
+    var stroke: Paint
     var strokeWidth = 1.0
 
 
     init {
         body = Polygon()
+        fill = Color.GREEN
+        stroke = Color.BLACK
         updatePoints()
     }
 
@@ -53,6 +52,12 @@ class Hexagon(var centerX: Double,var centerY: Double ,size:Double) {
         body.fill = fill
         body.stroke = stroke
         body.strokeWidth = strokeWidth
+    }
+
+    fun updateBody(){
+        body.fill = fill
+        body.strokeWidth = strokeWidth
+        body.stroke = stroke
     }
 
     fun getHexPoint(i: Int): Pair<Double, Double> {

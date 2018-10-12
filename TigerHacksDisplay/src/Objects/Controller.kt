@@ -27,28 +27,23 @@ class Controller{
 
         println("Width: $width Height:$height")
         timekeeper = TimeKeeper(this)
-//        nodes = NodePoints(width,height)
     }
 
     fun start() {
-//        nodes.createPoints(100);
-//        nodes.addPointsToPane(rootPane)
-//        nodes.setRandomPositions()
-
         timekeeper.start()
     }
 
     fun update() {
 
-        var newVal: Double = circle.radius + change
-
-        if(circle.radius == 0.0) {
-             change = 1.0
-         }
-        if(circle.radius == 300.0) {
-            change = -1.0
-        }
-        circle.radius = newVal
+//        var newVal: Double = circle.radius + change
+//
+//        if(circle.radius == 0.0) {
+//             change = 1.0
+//         }
+//        if(circle.radius == 300.0) {
+//            change = -1.0
+//        }
+//        circle.radius = newVal
 
     }
 
