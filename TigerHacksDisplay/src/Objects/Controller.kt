@@ -34,16 +34,7 @@ class Controller{
     }
 
     fun update() {
-
-//        var newVal: Double = circle.radius + change
-//
-//        if(circle.radius == 0.0) {
-//             change = 1.0
-//         }
-//        if(circle.radius == 300.0) {
-//            change = -1.0
-//        }
-//        circle.radius = newVal
+        display.updateDisplay()
 
     }
 

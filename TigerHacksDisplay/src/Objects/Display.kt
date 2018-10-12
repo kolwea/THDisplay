@@ -15,7 +15,7 @@ class Display(var width:Double ,var height:Double) {
     private lateinit var backgroundRootPane : Pane
 
     private lateinit var tigerHead : TigerHead
-    private lateinit var tigerHeadPane : StackPane
+    private lateinit var tigerHeadPane : Pane
 
     init {
         root.setPrefSize(width, height)
@@ -29,6 +29,11 @@ class Display(var width:Double ,var height:Double) {
     }
 
 
+    fun updateDisplay(){
+        var newHeadPos = tigerHead.update()
+        tigerHeadPane.translateX = newHeadPos.first
+        tigerHeadPane.translateY = newHeadPos.second
+    }
     fun resizeDisplay(widthVal: Double, heightVal: Double) {
         this.width = width;
         this.height = height;
@@ -54,7 +59,7 @@ class Display(var width:Double ,var height:Double) {
         tigerHead = TigerHead(tigerHeadScale)
         tigerHeadPane = tigerHead.rootPane
         root.children.add(tigerHeadPane)
-        tigerHeadPane.translateX = 50.0
+        tigerHead.setBound(0.0,width,0.0,height)
     }
 
 
