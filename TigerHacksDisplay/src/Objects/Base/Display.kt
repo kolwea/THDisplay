@@ -1,7 +1,9 @@
 package Objects.Base
 
 import Objects.Background.DisplayBackground
+import Objects.BackgroundLoading.BackgroundLoad
 import Objects.TigerHead.TigerHead
+import javafx.scene.layout.Background
 import javafx.scene.layout.Pane
 
 class Display(var width:Double ,var height:Double) {
@@ -16,11 +18,15 @@ class Display(var width:Double ,var height:Double) {
     private lateinit var tigerHead : TigerHead
     private lateinit var tigerHeadPane : Pane
 
+    private lateinit var loadBackgroud : BackgroundLoad
+    private lateinit var loadRoot : Pane
+
     init {
         root.setPrefSize(width, height)
         println("Display width:$width height:$height")
 
-        setupBackground()
+//        setupBackground()
+        setupBackgroundLoad()
         setupTigerHead()
 
         root.styleClass.add("display")
@@ -52,6 +58,13 @@ class Display(var width:Double ,var height:Double) {
         background = DisplayBackground(width,height)
         backgroundRootPane = background.rootPane
         root.children.add(backgroundRootPane)
+    }
+
+    private fun setupBackgroundLoad(){
+        loadBackgroud = BackgroundLoad(width,height)
+        loadRoot = loadBackgroud.rootPane
+        root.children.add(loadRoot)
+        loadRoot.toBack()
     }
 
     private fun setupTigerHead(){

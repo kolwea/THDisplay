@@ -17,6 +17,8 @@ public class TigerHacksDisplay extends Application {
         Scene scene = new Scene(rootPane,controller.getWidth(),controller.getHeight());
         scene.getStylesheets().add("/Stylesheets/style.css");
         primaryStage.setScene(scene);
+        primaryStage.setMaximized(true);
+        primaryStage.setFullScreen(true);
         primaryStage.show();
 
     }

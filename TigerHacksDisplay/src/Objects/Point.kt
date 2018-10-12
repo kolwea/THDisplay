@@ -1,18 +1,29 @@
 package Objects
 
 import javafx.scene.paint.Color
-import javafx.scene.paint.Paint
 import javafx.scene.shape.Circle
+import javafx.scene.shape.Line
 
 class Point {
     var body: Circle = Circle()
     var index: Int
-    var xPos : Double
-    var yPos : Double
-    var radius : Double
-    var fill: Paint
-    var stroke: Paint
+
+    var xPos: Double
+
+    var yPos: Double
+
+    var radius: Double
+
+    var fill : Color
+
+    var stroke: Color
+
     var strokeWidth: Double
+
+    var neighbors: ArrayList<Point> = ArrayList()
+
+    var connex : ArrayList<Line> = ArrayList()
+
 
 
     init {
@@ -26,13 +37,24 @@ class Point {
         update()
     }
 
+    fun addNeighbor(addMe: Point) {
+        if (!neighbors.contains(addMe)) {
+            neighbors.add(addMe)
+        }
+    }
+
+    fun addConnection(addMe:Line){
+        if(!connex.contains(addMe))
+            connex.add(addMe)
+    }
+
     fun setPosition(x: Double, y: Double) {
         xPos = x
         yPos = y
         update()
     }
 
-     fun update() {
+    fun update() {
         body.radius = radius
         body.centerX = xPos
         body.centerY = yPos
