@@ -1,9 +1,10 @@
-package Objects
+package Objects.Base
 
 import Objects.Background.DisplayBackground
+import Objects.BackgroundLoading.BackgroundLoad
 import Objects.TigerHead.TigerHead
+import javafx.scene.layout.Background
 import javafx.scene.layout.Pane
-import javafx.scene.layout.StackPane
 
 class Display(var width:Double ,var height:Double) {
 
@@ -15,13 +16,17 @@ class Display(var width:Double ,var height:Double) {
     private lateinit var backgroundRootPane : Pane
 
     private lateinit var tigerHead : TigerHead
-    private lateinit var tigerHeadPane : StackPane
+    private lateinit var tigerHeadPane : Pane
+
+    private lateinit var loadBackgroud : BackgroundLoad
+    private lateinit var loadRoot : Pane
 
     init {
         root.setPrefSize(width, height)
         println("Display width:$width height:$height")
 
-        setupBackground()
+//        setupBackground()
+        setupBackgroundLoad()
         setupTigerHead()
 
         root.styleClass.add("display")
@@ -29,6 +34,11 @@ class Display(var width:Double ,var height:Double) {
     }
 
 
+    fun updateDisplay(){
+       tigerHead.updateBounce()
+//        tigerHeadPane.translateX = newHeadPos.first
+//        tigerHeadPane.translateY = newHeadPos.second
+    }
     fun resizeDisplay(widthVal: Double, heightVal: Double) {
         this.width = width;
         this.height = height;
@@ -50,11 +60,18 @@ class Display(var width:Double ,var height:Double) {
         root.children.add(backgroundRootPane)
     }
 
+    private fun setupBackgroundLoad(){
+        loadBackgroud = BackgroundLoad(width,height)
+        loadRoot = loadBackgroud.rootPane
+        root.children.add(loadRoot)
+        loadRoot.toBack()
+    }
+
     private fun setupTigerHead(){
         tigerHead = TigerHead(tigerHeadScale)
         tigerHeadPane = tigerHead.rootPane
         root.children.add(tigerHeadPane)
-        tigerHeadPane.translateX = 50.0
+        tigerHead.setBound(0.0,width-tigerHeadScale,0.0,height-tigerHeadScale)
     }
 
 
