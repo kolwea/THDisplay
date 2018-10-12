@@ -1,33 +1,46 @@
 package Objects
 
+import javafx.scene.paint.Color
 import javafx.scene.paint.Paint
 import javafx.scene.shape.Circle
 
-class Point{
-    var x = 0.0
-    var y = 0.0
-    var radius = 10.0
-    var body : Circle
-    var index : Int = 0
+class Point {
+    var body: Circle = Circle()
+    var index: Int
+    var xPos : Double
+    var yPos : Double
+    var radius : Double
+    var fill: Paint
+    var stroke: Paint
+    var strokeWidth: Double
 
-    init{
-        body = Circle()
-        body.centerX = x;
-        body.centerY = y;
+
+    init {
+        xPos = 0.0
+        yPos = 0.0
+        index = -1
+        radius = 10.0
+        fill = Color.RED
+        stroke = Color.BLACK
+        strokeWidth = 5.0
+        update()
+    }
+
+    fun setPosition(x: Double, y: Double) {
+        xPos = x
+        yPos = y
+        update()
+    }
+
+     fun update() {
         body.radius = radius
-        body.fill = Paint.valueOf("Blue")
-    }
-
-    fun setRandomPosition(width : Double, height : Double){
-        val randomX = Math.random() * height
-        val randomY = Math.random() * width
-    }
-
-    fun updatePosition(x :Double, y : Double){
-        this.x = x
-        this.y = y
-        body.centerX = x
-        body.centerY = y
+        body.centerX = xPos
+        body.centerY = yPos
+        body.fill = fill
+        body.stroke = stroke
+        body.strokeWidth = strokeWidth
+        body.toFront()
+//        println("Point-$index updated.")
     }
 
 }

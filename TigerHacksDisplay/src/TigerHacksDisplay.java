@@ -1,6 +1,7 @@
 import Objects.Controller;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import javax.swing.*;
@@ -8,24 +9,20 @@ import javax.swing.*;
 import static sun.misc.Version.println;
 
 public class TigerHacksDisplay extends Application {
-    Display disp;
-    Controller cont;
+    Controller controller;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        disp = new Display();
-        disp.updateDisplay();
+        controller = new Controller();
+        Pane rootPane = controller.getRootPane();
+//        controller.addCircle();
+        controller.start();
 
-        Scene scene = disp.getPanel().getScene();
+        Scene scene = new Scene(rootPane,controller.getWidth(),controller.getHeight());
+        scene.getStylesheets().add("/Stylesheets/style.css");
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        cont = new Controller(disp.getRoot());
-        cont.start();
-    }
-
-    private void initDisplay(){
-        this.disp = new Display();
     }
 
     public static void main(String[] args){
