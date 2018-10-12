@@ -9,6 +9,7 @@ import javafx.scene.layout.StackPane
 import javafx.scene.paint.Color
 import javafx.scene.shape.Circle
 import javafx.scene.shape.Path
+import javafx.scene.shape.Polygon
 
 class TigerHead(var scale: Double) {
 
@@ -24,8 +25,8 @@ class TigerHead(var scale: Double) {
     private var acceleration: Double
     private var targetPosition: Pair<Double, Double>
     private var pathLength: Double
-    private var boundX : Pair<Double, Double>
-    private var boundY :Pair<Double, Double>
+    private var boundX: Pair<Double, Double>
+    private var boundY: Pair<Double, Double>
 
 
     val hexSize = scale / 2 + 25.0
@@ -33,16 +34,18 @@ class TigerHead(var scale: Double) {
     var logoBorder: Circle = Circle()
     var logoBorderRadius = boarderRadius + 7.0
     var hexBoarder: Hexagon
-    var dropShadow : DropShadow
+    var dropShadow: DropShadow
+    var gotoBool: Boolean
 
     init {
+        gotoBool = false
         position = Pair(0.0, 0.0)
         targetPosition = Pair(300.0, 300.0)
         velocity = Pair(3.0, 3.0)
         acceleration = 0.5
         pathLength = 0.0
-        boundX = Pair(0.0,0.0)
-        boundY = Pair(0.0,0.0)
+        boundX = Pair(0.0, 0.0)
+        boundY = Pair(0.0, 0.0)
 
         drawPane.setPrefSize(scale, scale)
         topPane.setPrefSize(scale, scale)
@@ -96,54 +99,73 @@ class TigerHead(var scale: Double) {
         position = Pair(x, y)
     }
 
-    fun getPosition():Pair<Double,Double>{
+    fun getPosition(): Pair<Double, Double> {
         return position
     }
 
-    fun setBound(xMin : Double,xMax : Double,yMin : Double,yMax: Double){
-        this.boundX = Pair(xMin,xMax)
-        this.boundY = Pair(yMin,yMax)
+    fun setBound(xMin: Double, xMax: Double, yMin: Double, yMax: Double) {
+        this.boundX = Pair(xMin, xMax)
+        this.boundY = Pair(yMin, yMax)
     }
 
-    fun updatePathing(){
+    fun updatePathing() {
 
     }
 
-    fun updateShadow(){
-        this.dropShadow.offsetX = Functions.map(position.first,boundX.first,boundX.second,-10.0,10.0)
-        this.dropShadow.offsetY = Functions.map(position.second,boundY.first,boundY.second,-10.0,10.0)
+    fun updateShadow() {
+        this.dropShadow.offsetX = Functions.map(position.first, boundX.first, boundX.second, -10.0, 10.0)
+        this.dropShadow.offsetY = Functions.map(position.second, boundY.first, boundY.second, -10.0, 10.0)
     }
 
-    fun updateHex(){
+    fun updateHex() {
         topPane.rotate = topPane.rotate + 0.7
     }
 
     fun updateBounce() {
         updateShadow()
         updateHex()
-        var x = position.first + drawPane.prefWidth/2
-        var y = position.second + drawPane.prefHeight/2
+        if (gotoBool == false) {
+            var x = position.first + drawPane.prefWidth / 2
+            var y = position.second + drawPane.prefHeight / 2
 
-        var xV = 0.0
-        var yV = 0.0
+            var xV = 0.0
+            var yV = 0.0
 
-        if (x <= (boundX.second) && (x >= boundX.first )){
-            xV = position.first + velocity.first * acceleration
+            if (x <= (boundX.second) && (x >= boundX.first)) {
+                xV = position.first + velocity.first * acceleration
+            } else {
+                velocity = Pair(-velocity.first, velocity.second)
+                xV = position.first + velocity.first * acceleration
+            }
+            if (y <= (boundY.second) && (y >= boundY.first)) {
+                yV = position.second + velocity.second * acceleration
+            } else {
+                velocity = Pair(velocity.first, -velocity.second)
+                yV = position.second + velocity.second * acceleration
+            }
+            position = Pair(xV, yV)
         }
-        else {
-            velocity = Pair(-velocity.first, velocity.second)
-            xV = position.first + velocity.first * acceleration
-        }
-        if(y <= (boundY.second ) && (y >= boundY.first  )) {
-            yV = position.second + velocity.second * acceleration
-        }
-        else {
-            velocity = Pair(velocity.first, -velocity.second)
-            yV = position.second + velocity.second * acceleration
-        }
-        position = Pair(xV,yV)
-        rootPane.translateX = position.first
-        rootPane.translateY = position.second
 //        return position
     }
+
+    fun goto(x: Double, y: Double) {
+        while (position.first != x && position.second != y) {
+            var xPos = position.first + drawPane.prefWidth / 2
+            var yPos = position.second + drawPane.prefHeight / 2
+
+            if (xPos > x)
+                velocity = Pair(Math.abs(velocity.first), velocity.second)
+            else {
+                velocity = Pair(-Math.abs(velocity.first), velocity.second)
+            }
+            if (yPos > y)
+                velocity = Pair(velocity.first, Math.abs(velocity.second))
+            else {
+                velocity = Pair(velocity.first, -Math.abs(velocity.second))
+            }
+            rootPane.translateX = position.first
+            rootPane.translateY = position.second
+        }
+    }
 }
+

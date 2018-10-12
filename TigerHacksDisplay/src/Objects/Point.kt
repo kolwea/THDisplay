@@ -62,7 +62,6 @@ class Point {
         body.stroke = stroke
         body.strokeWidth = strokeWidth
         body.toFront()
-//        println("Point-$index updated.")
     }
 
 }

@@ -1,12 +1,8 @@
 package Objects.Background
 
-import Objects.NodePoints
-import com.sun.org.apache.xpath.internal.operations.Bool
-import javafx.scene.Node
+import Objects.Base.NodePoints
 import javafx.scene.layout.Pane
 import javafx.scene.paint.Color
-import javafx.scene.shape.Circle
-import javafx.scene.shape.Polygon
 import javafx.scene.shape.Rectangle
 
 class DisplayBackground(var width: Double, var height: Double) {
@@ -28,7 +24,6 @@ class DisplayBackground(var width: Double, var height: Double) {
     init {
         rootPane.setPrefSize(width, height)
         rootPane.children.add(hexPane)
-//        setupHexPane()
     }
 
     private fun setupBottomPane() {
@@ -39,10 +34,6 @@ class DisplayBackground(var width: Double, var height: Double) {
         var maxWidthCount = Math.round(width / horzSpacing)
         var maxHeightCount = Math.round(height / vertSpacing)
 
-        println("Width/Height count")
-        println(maxWidthCount)
-        println(maxHeightCount)
-        println()
         for (i in 0 - extraHex until maxWidthCount + extraHex) {
             for (j in 0 - extraHex until maxHeightCount + extraHex) {
                 var hold: Hexagon
