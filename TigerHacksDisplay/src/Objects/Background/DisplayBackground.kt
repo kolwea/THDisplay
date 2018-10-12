@@ -28,7 +28,7 @@ class DisplayBackground(var width: Double, var height: Double) {
     init {
         rootPane.setPrefSize(width, height)
         rootPane.children.add(hexPane)
-        setupHexPane()
+//        setupHexPane()
     }
 
     private fun setupBottomPane() {

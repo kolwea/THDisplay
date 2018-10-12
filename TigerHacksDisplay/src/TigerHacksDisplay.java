@@ -1,12 +1,8 @@
-import Objects.Controller;
+import Objects.Base.Controller;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-
-import javax.swing.*;
-
-import static sun.misc.Version.println;
 
 public class TigerHacksDisplay extends Application {
     Controller controller;

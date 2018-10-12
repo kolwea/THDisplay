@@ -1,9 +1,8 @@
-package Objects
+package Objects.Base
 
 import Objects.Background.DisplayBackground
 import Objects.TigerHead.TigerHead
 import javafx.scene.layout.Pane
-import javafx.scene.layout.StackPane
 
 class Display(var width:Double ,var height:Double) {
 
@@ -30,9 +29,9 @@ class Display(var width:Double ,var height:Double) {
 
 
     fun updateDisplay(){
-        var newHeadPos = tigerHead.update()
-        tigerHeadPane.translateX = newHeadPos.first
-        tigerHeadPane.translateY = newHeadPos.second
+       tigerHead.updateBounce()
+//        tigerHeadPane.translateX = newHeadPos.first
+//        tigerHeadPane.translateY = newHeadPos.second
     }
     fun resizeDisplay(widthVal: Double, heightVal: Double) {
         this.width = width;
@@ -59,7 +58,7 @@ class Display(var width:Double ,var height:Double) {
         tigerHead = TigerHead(tigerHeadScale)
         tigerHeadPane = tigerHead.rootPane
         root.children.add(tigerHeadPane)
-        tigerHead.setBound(0.0,width,0.0,height)
+        tigerHead.setBound(0.0,width-tigerHeadScale,0.0,height-tigerHeadScale)
     }
 
 

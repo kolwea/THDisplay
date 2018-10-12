@@ -1,4 +1,4 @@
-package Objects
+package Objects.Base
 
 import javafx.scene.layout.Pane
 import javafx.scene.shape.Circle
@@ -18,11 +18,10 @@ class Controller{
     private var circle = Circle()
 
     var rootPane : Pane
-    var change : Double = 1.0
 
     init {
 
-        display = Display(width,height)
+        display = Display(width, height)
         rootPane = display.root
 
         println("Width: $width Height:$height")
