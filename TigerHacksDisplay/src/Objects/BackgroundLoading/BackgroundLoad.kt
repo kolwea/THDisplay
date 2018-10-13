@@ -68,23 +68,26 @@ class BackgroundLoad(var width : Double, var height : Double){
     fun update(){
         updateCount++
         for(point in nodes.points){
-            nodes.map { this::updateFlowfield }
+            updateFlowfield(point)
         }
     }
 
-    private fun updateFlowfield(point : Point){
-        var x = point.body.centerX
-        var y = point.body.centerY
+    fun updateFlowfield(point : Point){
+        var x = point.xPos
+        var y = point.yPos
         var z = this.updateCount
 
         var simplex = OpenSimplexNoise()
 
         var flow = simplex.eval(x,y,z)
-        var translateVal = Functions.map(flow,-1.0,1.0,-50.0,50.0)
+        var translateVal = Functions.map(flow,-1.0,1.0,-20.0,20.0)
 
         if(point.index == 0)
             println("X: $x  Y:$y TrasVal: $translateVal")
 
         point.setPosition(x+translateVal,y)
+        point.body.translateX = x + translateVal
+        point.body.translateY  = y
+        point.update()
     }
 }

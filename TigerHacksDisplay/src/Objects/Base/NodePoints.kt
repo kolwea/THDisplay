@@ -1,6 +1,7 @@
 package Objects.Base
 
 import Objects.Point
+import Tools.Tools.Functions
 import javafx.scene.layout.Pane
 import javafx.scene.paint.Color
 import javafx.scene.shape.Line
@@ -137,7 +138,8 @@ class NodePoints(var width : Double, var height :Double) {
 
         for(point in points){
             for(neighbor in point.neighbors){
-                this.connectPoints(point,neighbor)
+                var line = Functions.connect(point.body,neighbor.body)
+                connex.add(line)
             }
             for (line in point.connex){
                 connex.add(line)

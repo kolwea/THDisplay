@@ -30,10 +30,14 @@ public class TigerHacksDisplay extends Application {
 //        controller.addCircle();
         startCount = 0;
 
+
+
         addButtons();
 
         prime = primaryStage;
         scene = new Scene(rootPane, controller.getWidth(), controller.getHeight());
+        controller.setup();
+        controller.start();
         setupKeys(scene);
         scene.getStylesheets().add("/Stylesheets/style.css");
         primaryStage.setScene(scene);
@@ -41,8 +45,7 @@ public class TigerHacksDisplay extends Application {
         primaryStage.setFullScreen(true);
         primaryStage.show();
 
-        controller.setup();
-        controller.start();
+
 
     }
 
@@ -77,7 +80,7 @@ public class TigerHacksDisplay extends Application {
         scene.setOnKeyPressed(new javafx.event.EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-                if (event.getCode() == KeyCode.SPACE || event.getCode() == KeyCode.LEFT) {
+                if (event.getCode() == KeyCode.SPACE || event.getCode() == KeyCode.RIGHT) {
                     if(startCount == 0){
                         controller.addContent();
 //                        controller.stopHead();
@@ -87,7 +90,7 @@ public class TigerHacksDisplay extends Application {
                         controller.nextSlide();
                     }
                 }
-                if (event.getCode() == KeyCode.RIGHT) {
+                if (event.getCode() == KeyCode.LEFT) {
                     controller.prevSlide();
                 }
             }

@@ -124,7 +124,6 @@ class TigerHead(var scale: Double) {
     fun updateBounce() {
         updateShadow()
         updateHex()
-        if (gotoBool == false) {
             var x = position.first + drawPane.prefWidth / 2
             var y = position.second + drawPane.prefHeight / 2
 
@@ -144,8 +143,8 @@ class TigerHead(var scale: Double) {
                 yV = position.second + velocity.second * acceleration
             }
             position = Pair(xV, yV)
-        }
-//        return position
+
+
     }
 
     fun goto(x: Double, y: Double) {

@@ -4,7 +4,6 @@ import Objects.Background.DisplayBackground
 import Objects.BackgroundLoading.BackgroundLoad
 import Objects.Presentation.Presentation
 import Objects.TigerHead.TigerHead
-import javafx.scene.layout.BorderPane
 import javafx.scene.layout.Pane
 import javafx.scene.layout.StackPane
 import java.io.File
@@ -46,6 +45,7 @@ class Display(var width:Double ,var height:Double) {
 
     fun addContentPane(){
         root.children.addAll(contentPane)
+        tigerHeadPane.toFront()
 
     }
     fun updateDisplay(){
@@ -84,6 +84,7 @@ class Display(var width:Double ,var height:Double) {
         presentation = Presentation(width,height,folder)
         presentationRoot = presentation.rootPane
         contentPane.children.addAll(presentationRoot)
+        tigerHeadPane.toFront()
         return presentation
     }
 

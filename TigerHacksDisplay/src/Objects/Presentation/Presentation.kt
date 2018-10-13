@@ -11,6 +11,7 @@ class Presentation(var width:Double, var height:Double,var folder : File){
     val rootPane = StackPane()
     val presentPane = VBox()
     val slidePane = StackPane()
+//    lateinit var video : Video
 
     var currSlide : Int
 
@@ -32,6 +33,7 @@ class Presentation(var width:Double, var height:Double,var folder : File){
         slideController = SlideController(folder,presentPane.width,presentPane.height)
         presentPane.toFront()
         slideController.setupSlides()
+//        video = Video(1500.0,700.0)
         start()
     }
 
@@ -53,12 +55,15 @@ class Presentation(var width:Double, var height:Double,var folder : File){
         if(currSlide < slideController.slides.size-1)
             currSlide++
         slideController.slides[currSlide].slideView.toFront()
+        println(currSlide)
     }
 
     fun prevSlide(){
         if(currSlide > 0)
             currSlide--
         slideController.slides[currSlide].slideView.toFront()
+        println(currSlide)
+
     }
 
 

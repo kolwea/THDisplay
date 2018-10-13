@@ -9,37 +9,26 @@ class SlideController(var slideFolder: File, var width: Double, var height: Doub
 
 
     var slides: ArrayList<Slide> = ArrayList<Slide>()
-    var pane: Pane = Pane()
-    private var currSlide: Slide?
-    private var currSlideIndex: Int
-
-
-
-    init {
-        currSlideIndex = -1
-        currSlide = null
-    }
-
 
     fun setupSlides() {
         createSlides()
         connectSlides()
     }
 
-    private fun connectSlides(){
+    fun connectSlides(){
         for(i in 0 until slides.size){
             var curr = slides[i]
-            curr.index = i;
             if(i-1>=0)
                 curr.setPrevSlide(slides[i-1])
             if(i+1 < slides.size)
                 curr.setNextSlide(slides[i+1])
+            println("Slide: $i")
         }
-        for(slide in slides)
-            println(slide.index)
+
+
     }
 
-    private fun createSlides(){
+    fun createSlides(){
         var ext = arrayOf("jpg", "jpeg", "png", "PNG")
 
         fun getExtension(f: File): String {
@@ -54,19 +43,16 @@ class SlideController(var slideFolder: File, var width: Double, var height: Doub
             return ext;
         }
 
-        for (file in slideFolder.listFiles()) {
-            val extension = getExtension(file)
-            if (extension != null) {
-                for (exten in ext) {
-                    if (extension.contains(exten)) {
-                        var image = Image(file.toURI().toString(),1400.0,0.0,true,true)
+        for (i in 0 until 38) {
+//            if (extension != null) {
+//                for (exten in ext) {
+//                    if (extension.contains(exten)) {
+                        var image = Image(slideFolder.listFiles().get(i).toURI().toString(),1400.0,0.0,true,true)
                         var slide = Slide(image)
+            slide.index = i
                         slides.add(slide)
                     }
 
-                }
-            }
-        }
     }
 
 
