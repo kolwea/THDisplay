@@ -2,8 +2,8 @@ package Objects
 
 import Objects.Background.DisplayBackground
 import Objects.BackgroundLoading.BackgroundLoad
-import Objects.Presentation.Presentation
-import Objects.TigerHead.TigerHead
+import Presentation.Presentation
+import TigerHead.TigerHead
 import javafx.scene.layout.Pane
 import javafx.scene.layout.StackPane
 import java.io.File

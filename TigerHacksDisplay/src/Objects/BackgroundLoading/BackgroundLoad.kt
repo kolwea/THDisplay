@@ -1,12 +1,11 @@
 package Objects.BackgroundLoading
 
-import Objects.Base.NodePoints
+import Base.NodePoints
 import Objects.Point
 import Tools.Tools.Functions
 import Tools.Tools.OpenSimplexNoise
 import javafx.scene.layout.Pane
 import javafx.scene.paint.Color
-import javafx.scene.shape.Rectangle
 
 class BackgroundLoad(var width : Double, var height : Double){
 

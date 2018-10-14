@@ -1,6 +1,6 @@
 package Objects.Background
 
-import Objects.Base.NodePoints
+import Base.NodePoints
 import javafx.scene.layout.Pane
 import javafx.scene.paint.Color
 import javafx.scene.shape.Rectangle

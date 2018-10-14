@@ -1,6 +1,6 @@
 package Objects
 
-import Objects.Presentation.Presentation
+import Presentation.Presentation
 import javafx.scene.layout.Pane
 import javafx.scene.shape.Circle
 import javafx.stage.Screen
