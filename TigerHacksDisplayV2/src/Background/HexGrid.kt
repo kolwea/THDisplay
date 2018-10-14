@@ -11,22 +11,24 @@ import javax.xml.crypto.dom.DOMCryptoContext
 
 class HexGrid(var width: Double, var height: Double, private var size: Double, private var flat: Boolean, var nudgeH: Double, var nudgeV: Double) {
 
-    private val extraHexWidth = 9
+    private val extraHexWidth = 8
     private val extraHexHeight = 3
     private val addCircles = false
-    val flowMax = 1.0
-    val flowMin = -1.0
-    var flowScale = .0019
+    val flowMax = 20.0
+    val flowMin = 2.0
+    var flowScale = .000007
     val root = Pane()
     var count = 0.0
-    var countChangeVal = 100
+    var countChangeVal = .1
 
 
-    private val paddingRatio = 0.06
+    private val paddingRatio = 0.07
     private val hexPadding = paddingRatio * size
     private val fill = Color.RED
     private val stroke = Color.BLACK
     private val strokeWidth = 2.0
+    private val flowDistance = 0.0
+
 
     private val hexWidthFlat = 2 * size
     private val hexHeightFlat = size * Math.sqrt(3.0)
@@ -42,6 +44,7 @@ class HexGrid(var width: Double, var height: Double, private var size: Double, p
     private val cols = Array<Double>(getColumnCount()) { 0.0 }
     private val hexagons: ArrayList<Hexagon>
     private val hexGlass: ArrayList<HexGlass>
+
 
     private val hexCenterPositions: ArrayList<Pair<Double, Double>>
 
@@ -100,6 +103,15 @@ class HexGrid(var width: Double, var height: Double, private var size: Double, p
         return list
     }
 
+//    private fun getGlassShapes(positions: ArrayList<Pair<Double, Double>>): ArrayList<Hexagon> {
+//        val list = arrayListOf<Hexagon>()
+//        for (center in positions) {
+//            var hex = createHexagon(center.first, center.second+flowDistance, size - hexPadding)
+//            list.add(hex)
+//        }
+//        return list
+//    }
+
     private fun addHexagonsToPane() {
         for (hex in hexagons) {
             root.children.add(hex.body)
@@ -128,7 +140,7 @@ class HexGrid(var width: Double, var height: Double, private var size: Double, p
 
     private fun setupGlass() {
         for (hex in hexagons) {
-            var hold = HexGlass(hex)
+            var hold = HexGlass(hex, flowDistance)
             hexGlass.add(hold)
         }
     }
@@ -136,50 +148,31 @@ class HexGrid(var width: Double, var height: Double, private var size: Double, p
     private fun addGlass() {
         for (hex in hexGlass) {
             root.children.add(hex.body)
-            root.children.addAll(hex.connections)
-            for(point in hex.anchorPointsHex){
-                root.children.addAll(point.body)
-                point.body.toBack()
-            }
-            for(point in hex.anchorPointsGlass){
-                root.children.addAll(point.body)
-                point.body.toFront()
-            }
-            for (line in hex.connections) {
-//                root.children.addAll(line)
-                line.toFront()
-            }
-            hex.body.toFront()
+            root.children.addAll( hex.glassPoint.body, hex.parentPoint.body)
+//            hex.connection.toBack()
+            hex.parentPoint.body.toBack()
         }
     }
 
     fun update() {
-//        var shapeList = arrayListOf<ArrayList<Pair<Double,Double>>>()
         for (glass in hexGlass) {
             updateNoiseField(glass)
         }
-        for (glass in hexGlass) {
-            glass.updateBody()
-            glass.body.toFront()
-        }
+
         count += countChangeVal
     }
 
     fun updateNoiseField(glass: HexGlass) {
-        val points = glass.shapePoints
-        val list = glass.changePoints
-        for (i in 0 until points.size) {
-            val pos = points[i]
-            val x = pos.first
-            val y = pos.second
-            val z = count
+        val x = glass.centerX
+        val y = glass.centerY
+        val z = count
 
-            val simplex = OpenSimplexNoise()
-            val noiseVal = simplex.eval(x * flowScale, y * flowScale, z)
-            val newY = Functions.map(noiseVal, -1.0, 1.0, flowMin, flowMax)
-            list[i] = Pair(glass.shapePoints[i].first, glass.shapePoints[i].second + newY)
-        }
-        glass.changePoints = list
+        val simplex = OpenSimplexNoise()
+
+        val noiseVal = simplex.eval(x  * this.flowScale , y * flowScale , z )
+
+        val newY = Functions.map(noiseVal*10, -10.0, 10.0,  this.flowMin, this.flowMax)
+        glass.setPosition(glass.centerX,glass.centerY + newY)
     }
 
 

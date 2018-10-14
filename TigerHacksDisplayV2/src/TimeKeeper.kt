@@ -22,7 +22,7 @@ class TimeKeeper (private val controller: Controller){
 
     private fun setupTimeline() {
         var event = EventHandler<ActionEvent> {update()}
-        keyframe = KeyFrame(Duration.millis(10.0),event)
+        keyframe = KeyFrame(Duration.millis(50.0),event)
         timeline = Timeline(keyframe)
         timeline.setCycleCount(Animation.INDEFINITE)
     }

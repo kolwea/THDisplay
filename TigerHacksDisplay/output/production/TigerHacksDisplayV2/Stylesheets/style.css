@@ -11,7 +11,7 @@
 
 .TH-Orange{
     -fx-background-color: #F8993A;
-    -fx-fill: #F8993A;
+    -fx-fill: #fcb965;
 }
 
 .TH-Tan{
@@ -63,5 +63,79 @@
 .background-hexagon{
 
 }
+
+.root-view{
+    /*-fx-padding: 100.0;*/
+}
+
+.display-root{
+    /*-fx-background-color: #333132e5;*/
+    -fx-padding: 100.0;
+
+}
+
+.contentRoot{
+    -fx-background-color: #333132e5;
+
+}
+
+.contentRoot-center{
+    -fx-background-color: #333132e5;
+    -fx-padding: 45.0;
+
+}
+
+.catergory-display0-rootPane{
+
+}
+
+.catergory-display0-title{
+
+}
+
+.catergory-display0-content{
+-fx-background-color: #125157 ;
+
+}
+
+.catergory-display1-rootPane{
+
+}
+
+.catergory-display1-title{
+    -fx-background-color: #6b5da9;
+
+}
+
+.catergory-display1-content{
+    -fx-background-color: #333132;
+
+}
+
+.catergory-display2-rootPane {
+
+}
+
+.catergory-display2-title {
+
+}
+
+.catergory-display2-content {
+    -fx-background-color: #FEF8E2;
+
+}
+
+
+
+.display-bottom{
+    -fx-background-color: #FEF8E2;
+}
+
+.display-middle{
+    -fx-background-color: #F8993A;
+
+}
+
+
 
 

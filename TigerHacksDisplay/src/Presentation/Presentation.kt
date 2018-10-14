@@ -6,13 +6,11 @@ import java.io.File
 
 class Presentation(var width:Double, var height:Double,var folder : File){
 
-    lateinit var slideController : SlideController
+    var slideController : SlideController
 
     val rootPane = StackPane()
     val presentPane = VBox()
     val slidePane = StackPane()
-//    lateinit var video : Video
-
     var currSlide : Int
 
     lateinit var slideHead : Slide

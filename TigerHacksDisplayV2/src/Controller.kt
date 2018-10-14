@@ -1,16 +1,13 @@
 import Background.HexGrid
-import Tools.Hexagon
+import Display.Display
 import javafx.event.EventHandler
 import javafx.scene.Scene
 import javafx.scene.input.KeyCode
-import javafx.scene.input.KeyEvent
 import javafx.scene.layout.StackPane
-import javafx.scene.paint.Color
 import javafx.stage.Screen
 import javafx.stage.Stage
 import java.awt.Dimension
 import java.awt.Toolkit
-import java.sql.Time
 
 class Controller(private var stage: Stage) {
     private val debug = true
@@ -21,8 +18,10 @@ class Controller(private var stage: Stage) {
 
     private val prefWidth = 700.0
     private val prefHeight = 450.0
-    private val hexNudgeH = -42.0
-    private val hexNudgeV = -38.0
+    private val hexNudgeH = 16.0
+    private val hexNudgeV = -10.0
+    private val hexSize = 125.0
+
 
     lateinit var scene: Scene
 
@@ -30,7 +29,7 @@ class Controller(private var stage: Stage) {
 
     private lateinit var background: HexGrid
     private lateinit var timekeeper: TimeKeeper
-    private val hexSize = 90.0
+    private lateinit var display: Display
 
     init {
         val windowDimension = getWindowDimension()
@@ -39,8 +38,9 @@ class Controller(private var stage: Stage) {
 
         rootPane = StackPane()
         rootPane.setPrefSize(prefWidth, prefHeight)
+        rootPane.styleClass.add("root-view")
 
-        setupDisplay()
+        setupView()
         setupControls()
         setupTimekeeper()
         setupPresentation()
@@ -52,11 +52,12 @@ class Controller(private var stage: Stage) {
         background.update()
     }
 
-    private fun setupDisplay() {
+    private fun setupView() {
         if (debug)
             println("Initializing display setup...")
 
         setupBackground()
+        setupDisplay()
         setupScene()
 
         if (debug)
@@ -77,6 +78,11 @@ class Controller(private var stage: Stage) {
 
     private fun setupTimekeeper() {
         timekeeper = TimeKeeper(this)
+    }
+
+    private fun setupDisplay(){
+        display = Display(windowWidth,windowHeight)
+        rootPane.children.add(display.root)
     }
 
     fun start() {

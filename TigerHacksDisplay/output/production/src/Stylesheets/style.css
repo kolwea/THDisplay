@@ -5,7 +5,47 @@
     -fx-background-color:#fffff2;
 }
 
-.laserdisplay-background{
+.display{
     -fx-background-color: #eaea91;
+}
+
+.TH-Orange{
+    -fx-background-color: #F8993A;
+    -fx-fill: #F8993A;
+}
+
+.TH-Tan{
+    -fx-background-color: #FEF8E2;
+}
+
+.TH-Black{
+    -fx-background-color: #333132;
+}
+
+.TH-Blue{
+    -fx-background-color: #C5E5D5;
+}
+
+.shadow{
+
+}
+
+.content-pane{
+    /*-fx-background-color: #e6c7c7;*/
+    -fx-padding: 50.0 , 70.0;
+}
+
+.presentation-root{
+    -fx-background-color: #F8993A;
+    -fx-padding: 4.0;
+
+}
+
+.presentation-content{
+    -fx-background-color: #333132;
+}
+
+.slide-view{
+
 }
 
