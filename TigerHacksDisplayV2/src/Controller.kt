@@ -1,6 +1,8 @@
 import Background.HexGrid
+import Tools.Hexagon
 import javafx.scene.Scene
 import javafx.scene.layout.StackPane
+import javafx.scene.paint.Color
 import javafx.stage.Screen
 import javafx.stage.Stage
 import java.awt.Dimension
@@ -15,13 +17,15 @@ class Controller(private var stage:Stage) {
 
     private val prefWidth = 700.0
     private val prefHeight = 450.0
+    private val hexNudgeH = -42.0
+    private val hexNudgeV = -38.0
 
     lateinit var scene: Scene
 
     private var rootPane: StackPane
 
     private lateinit var background: HexGrid
-    private val hexSize = 40.0
+    private val hexSize = 90.0
 
     init {
         val windowDimension = getWindowDimension()
@@ -29,6 +33,7 @@ class Controller(private var stage:Stage) {
         windowHeight = windowDimension.height.toDouble() + 1
 
         rootPane = StackPane()
+        rootPane.setPrefSize(prefWidth,prefHeight)
 
         setupDisplay()
         setupControls()
@@ -71,7 +76,7 @@ class Controller(private var stage:Stage) {
     }
 
     private fun setupBackground(){
-        background = HexGrid(windowWidth,windowHeight,hexSize,true)
+        background = HexGrid(windowWidth,windowHeight,hexSize,true, hexNudgeH, hexNudgeV)
         rootPane.children.add(background.root)
     }
 
@@ -81,6 +86,5 @@ class Controller(private var stage:Stage) {
         var dimension = Dimension(Math.ceil(screen.width).toInt(), Math.ceil(screen.height).toInt())
         return dimension;
     }
-
 
 }

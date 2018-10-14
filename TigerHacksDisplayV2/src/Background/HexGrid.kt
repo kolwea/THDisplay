@@ -6,7 +6,7 @@ import javafx.scene.layout.Pane
 import javafx.scene.paint.Color
 import javafx.scene.shape.Circle
 
-class HexGrid(var width: Double, var height: Double, private var size: Double, private var flat: Boolean) {
+class HexGrid(var width: Double, var height: Double, private var size: Double, private var flat: Boolean,var nudgeH:Double, var nudgeV:Double) {
 
     private val extraHexWidth = 9
     private val extraHexHeight = 3
@@ -14,7 +14,7 @@ class HexGrid(var width: Double, var height: Double, private var size: Double, p
     val root = Pane()
 
 
-    private val paddingRatio = 0.3
+    private val paddingRatio = 0.06
     private val hexPadding = paddingRatio*size
     private val fill = Color.RED
     private val stroke = Color.BLACK
@@ -47,8 +47,8 @@ class HexGrid(var width: Double, var height: Double, private var size: Double, p
     fun getHexCenters(): ArrayList<Pair<Double, Double>> {
         for (r in 0 until rows.size) {
             for (c in 0 until cols.size) {
-                cols[c] = c  * horzDistanceFlat
-                rows[r] = r * vertDistanceFlat
+                cols[c] = (c * horzDistanceFlat) + nudgeH
+                rows[r] = (r * vertDistanceFlat) + nudgeV
             }
         }
 
