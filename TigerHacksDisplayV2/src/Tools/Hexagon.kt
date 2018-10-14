@@ -8,7 +8,7 @@ class Hexagon(centerX: Double, centerY: Double, initialSize: Double, initialFill
 
     var body = Polygon()
 
-    var hexPoints = Array(6) { Pair(0.0, 0.0) }
+    var hexPoints : Array<Pair<Double,Double>>
 
     var x = centerX
         set(value) {
@@ -39,6 +39,7 @@ class Hexagon(centerX: Double, centerY: Double, initialSize: Double, initialFill
     var connex: ArrayList<Line> = ArrayList()
 
     init {
+        hexPoints = Array(6){Pair(0.0,0.0)}
         updateBody()
         updatePoints()
     }

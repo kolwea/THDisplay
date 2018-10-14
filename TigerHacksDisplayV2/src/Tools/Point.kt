@@ -4,37 +4,33 @@ import javafx.scene.paint.Color
 import javafx.scene.shape.Circle
 import javafx.scene.shape.Line
 
-class Point {
+class Point(centerX:Double,centerY:Double, initialRadius:Double, initialFill : Color, initialStroke : Color, initialStrokeWidth:Double) {
+
+
+
     var body: Circle = Circle()
-    var index: Int
 
-    var xPos: Double
+    var x = centerX
 
-    var yPos: Double
+    var y = centerY
 
-    var radius: Double
+    var radius = initialRadius
 
-    var fill : Color
+    var fill = initialFill
 
-    var stroke: Color
+    var stroke = initialStroke
 
-    var strokeWidth: Double
+    var strokeWidth = initialStrokeWidth
+
 
     var neighbors: ArrayList<Point> = ArrayList()
 
     var connex : ArrayList<Line> = ArrayList()
 
-
-
     init {
-        xPos = 0.0
-        yPos = 0.0
-        index = -1
-        radius = 10.0
-        fill = Color.RED
-        stroke = Color.BLACK
-        strokeWidth = 5.0
         update()
+        updateStyle()
+        body.radius = 5.0
     }
 
     fun addNeighbor(addMe: Point) {
@@ -48,20 +44,22 @@ class Point {
             connex.add(addMe)
     }
 
-    fun setPosition(x: Double, y: Double) {
-        xPos = x
-        yPos = y
-        update()
+    fun setPosition(x:Double,y:Double){
+        this.x = x
+        this.y = y
     }
 
     fun update() {
+        body.centerX = x
+        body.centerY = y
+        body.toFront()
+    }
+
+    fun updateStyle(){
         body.radius = radius
-        body.centerX = xPos
-        body.centerY = yPos
         body.fill = fill
         body.stroke = stroke
         body.strokeWidth = strokeWidth
-        body.toFront()
     }
 
 }

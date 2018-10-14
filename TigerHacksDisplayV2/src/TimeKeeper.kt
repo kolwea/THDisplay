@@ -28,7 +28,7 @@ class TimeKeeper (private val controller: Controller){
     }
 
     fun update(){
-        updateFuntion
+        controller.update()
     }
 
 
