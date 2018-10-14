@@ -1,18 +1,20 @@
 package Background
 
 import Tools.Hexagon
+import Tools.Point
 import javafx.scene.layout.Pane
 import javafx.scene.paint.Color
 import javafx.scene.shape.Circle
 
 class HexGrid(var width: Double, var height: Double, private var size: Double, private var flat: Boolean) {
 
-    val extraHex = 3
+    private val extraHexWidth = 9
+    private val extraHexHeight = 3
     private val addCircles = false
     val root = Pane()
 
 
-    private val paddingRatio = 0.0
+    private val paddingRatio = 0.3
     private val hexPadding = paddingRatio*size
     private val fill = Color.RED
     private val stroke = Color.BLACK
@@ -45,8 +47,8 @@ class HexGrid(var width: Double, var height: Double, private var size: Double, p
     fun getHexCenters(): ArrayList<Pair<Double, Double>> {
         for (r in 0 until rows.size) {
             for (c in 0 until cols.size) {
-                cols[c] = (c + 1) * horzDistanceFlat
-                rows[r] = (r + 1) * vertDistanceFlat
+                cols[c] = c  * horzDistanceFlat
+                rows[r] = r * vertDistanceFlat
             }
         }
 
@@ -70,6 +72,12 @@ class HexGrid(var width: Double, var height: Double, private var size: Double, p
         return points
     }
 
+    fun map(runMe:(hex : Hexagon)->Unit){
+        for(hex in hexagons){
+            runMe(hex)
+        }
+    }
+
     private fun getHexagonShapes(positions:ArrayList<Pair<Double,Double>>):ArrayList<Hexagon>{
         val list = arrayListOf<Hexagon>()
         for(center in positions){
@@ -80,8 +88,9 @@ class HexGrid(var width: Double, var height: Double, private var size: Double, p
     }
 
     private fun addHexagonsToPane(){
-        for(hex in hexagons)
+        for(hex in hexagons) {
             root.children.add(hex.body)
+        }
     }
 
     private fun createHexagon(centerX:Double,centerY:Double,size:Double): Hexagon {
@@ -90,17 +99,17 @@ class HexGrid(var width: Double, var height: Double, private var size: Double, p
 
     private fun getRowCount(): Int {
         if (flat) {
-            return (height / hexHeightFlat).toInt()
+            return (height / hexHeightFlat).toInt() + extraHexHeight
         } else {
-            return (height / hexHeightPointy).toInt()
+            return (height / hexHeightPointy).toInt() + extraHexHeight
         }
     }
 
     private fun getColumnCount(): Int {
         if (flat) {
-            return (width / hexWidthFlat).toInt()
+            return (width / hexWidthFlat).toInt() + extraHexWidth
         } else {
-            return (width / hexWidthPointy).toInt()
+            return (width / hexWidthPointy).toInt() + extraHexWidth
         }
     }
 

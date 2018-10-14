@@ -23,7 +23,7 @@ class Hexagon(centerX: Double, centerY: Double, initialSize: Double, initialFill
             updatePoints()
         }
     var fill = initialFill
-        set(valeue) {
+        set(value) {
             this.updateBody()
         }
     var stroke = initialStroke
