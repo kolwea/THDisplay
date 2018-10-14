@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/THDisplay.iml" filepath="$PROJECT_DIR$/.idea/THDisplay.iml" />
       <module fileurl="file://$PROJECT_DIR$/TigerHacksDisplay/TigerHacksDisplay.iml" filepath="$PROJECT_DIR$/TigerHacksDisplay/TigerHacksDisplay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TigerHacksDisplayV2/TigerHacksDisplayV2.iml" filepath="$PROJECT_DIR$/TigerHacksDisplayV2/TigerHacksDisplayV2.iml" />
       <module fileurl="file://$PROJECT_DIR$/TigerHacksDisplay/src.iml" filepath="$PROJECT_DIR$/TigerHacksDisplay/src.iml" />
     </modules>
   </component>
