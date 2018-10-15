@@ -1,3 +1,4 @@
+import Background.FlowField
 import Background.HexGrid
 import Display.Display
 import javafx.event.EventHandler
@@ -27,7 +28,8 @@ class Controller(private var stage: Stage) {
 
     private var rootPane: StackPane
 
-    private lateinit var background: HexGrid
+//    private lateinit var background: HexGrid
+    private lateinit var background: FlowField
     private lateinit var timekeeper: TimeKeeper
     private lateinit var display: Display
 
@@ -50,6 +52,7 @@ class Controller(private var stage: Stage) {
 
     fun update() {
         background.update()
+        display.update()
     }
 
     private fun setupView() {
@@ -98,7 +101,8 @@ class Controller(private var stage: Stage) {
     }
 
     private fun setupBackground() {
-        background = HexGrid(windowWidth, windowHeight, hexSize, true, hexNudgeH, hexNudgeV)
+//        background = HexGrid(windowWidth, windowHeight, hexSize, true, hexNudgeH, hexNudgeV)
+        background = FlowField(windowWidth,windowHeight)
         rootPane.children.add(background.root)
     }
 
@@ -111,23 +115,23 @@ class Controller(private var stage: Stage) {
 
     private fun setupKeys() {
         scene.onKeyPressed = EventHandler { event ->
-            if (event.code == KeyCode.Z) {
-                this.background.flowScale--
-                println(background.flowScale)
-            }
-            if (event.code == KeyCode.X) {
-                this.background.flowScale++
-                println(background.flowScale)
-
-            }
-            if (event.code == KeyCode.K) {
-                this.background.countChangeVal++
-                println(background.countChangeVal)
-            }
-            if (event.code == KeyCode.L) {
-                this.background.countChangeVal--
-                println(background.countChangeVal)
-            }
+//            if (event.code == KeyCode.Z) {
+//                this.background.flowScale--
+//                println(background.flowScale)
+//            }
+//            if (event.code == KeyCode.X) {
+//                this.background.flowScale++
+//                println(background.flowScale)
+//
+//            }
+//            if (event.code == KeyCode.K) {
+//                this.background.countChangeVal++
+//                println(background.countChangeVal)
+//            }
+//            if (event.code == KeyCode.L) {
+//                this.background.countChangeVal--
+//                println(background.countChangeVal)
+//            }
         }
     }
 

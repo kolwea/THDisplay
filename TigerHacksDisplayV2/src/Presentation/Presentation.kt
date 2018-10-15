@@ -33,7 +33,6 @@ class Presentation(var width:Double, var height:Double,var folder : File){
         slideController = SlideController(folder,presentPane.width,presentPane.height)
         presentPane.toFront()
         slideController.setupSlides()
-//        video = Video(1500.0,700.0)
         start()
     }
 

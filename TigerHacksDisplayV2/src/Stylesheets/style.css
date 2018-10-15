@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Outage;
+    src: url(./Fonts/Outage.ttf);
+}
+
 .header{
     -fx-background-color: #f3eff5;
 }
@@ -77,20 +82,21 @@
 .contentRoot{
     -fx-background-color: #333132e5;
 
+
+
 }
 
 .contentRoot-center{
     -fx-background-color: #333132e5;
-    -fx-padding: 45.0;
 
 }
 
 .catergory-display0-rootPane{
-
+    -fx-padding: 10.0;
 }
 
 .catergory-display0-title{
-
+ -fx-background-color: #C5E5D5;
 }
 
 .catergory-display0-content{
@@ -98,34 +104,34 @@
 
 }
 
-.catergory-display1-rootPane{
+.catergory-display2-rootPane{
+    -fx-padding: 10.0;
 
 }
 
-.catergory-display1-title{
+.catergory-display2-title{
     -fx-background-color: #6b5da9;
 
 }
 
-.catergory-display1-content{
+.catergory-display2-content{
     -fx-background-color: #333132;
 
 }
 
-.catergory-display2-rootPane {
+.catergory-display1-rootPane {
+    -fx-padding: 10.0;
 
 }
 
-.catergory-display2-title {
-
+.catergory-display1-title {
+-fx-background-color: #fcb965;
 }
 
-.catergory-display2-content {
+.catergory-display1-content {
     -fx-background-color: #FEF8E2;
 
 }
-
-
 
 .display-bottom{
     -fx-background-color: #FEF8E2;
@@ -135,6 +141,34 @@
     -fx-background-color: #F8993A;
 
 }
+
+.catergory-label{
+    -fx-font-size: 36;
+    -fx-font-family: Outage;
+}
+
+.catergory-description{
+    -fx-font-size: 28;
+    -fx-font-family: "Arial Rounded MT Bold";
+}
+
+.top-team-wrapper{
+    -fx-padding: 10.0;
+}
+
+.top-team-view0{
+    -fx-start-margin: 10.0;
+    -fx-background-color: #fffff2;
+}
+.top-team-view1{
+    -fx-start-margin: 10.0;
+    -fx-background-color: #fffff2;
+}
+.top-team-view2{
+    -fx-start-margin: 10.0;
+    -fx-background-color: #fffff2;
+}
+
 
 
 

@@ -45,13 +45,13 @@ class Point(centerX:Double,centerY:Double, initialRadius:Double, initialFill : C
     }
 
     fun setPosition(x:Double,y:Double){
-        this.x = x
-        this.y = y
+        body.translateX = x
+        body.translateY = y
+        update()
+//        updateStyle()
     }
 
     fun update() {
-        body.centerX = x
-        body.centerY = y
         body.toFront()
     }
 

@@ -1,13 +1,15 @@
 package Display
 
+import TigerHead.TigerHead
 import javafx.geometry.Pos
 import javafx.scene.layout.*
 
 class Display(private val width: Double, private val height: Double) {
     val displayCount = 3
-    val catergories = arrayOf("Developer", "Beginner", "Business")
-    val catWidth = width * 0.2
+    val catergories = arrayOf("Developer", "Beginner", "Business","Popular Choice")
+    val catWidth = width * 0.5
     val catHeight = height * 0.68
+    lateinit var tigerhHead : TigerHead
 
     val rootWidth = 0.0
     val rootHeight = 0.0
@@ -15,7 +17,6 @@ class Display(private val width: Double, private val height: Double) {
     val spacer1 = Pane()
     val spacer2 = Pane()
     val spacerWidth = 200.0
-    val spacerHeight = 100.0
 //    val botWidth = 0.0
 //    val botHeight =  0.0
 //    val middleWidth = 0.0
@@ -40,6 +41,7 @@ class Display(private val width: Double, private val height: Double) {
         setupContentRoot()
         setupMiddle()
         setupBottom()
+        addTigerHead()
     }
 
     private fun setupRoot() {
@@ -75,9 +77,21 @@ class Display(private val width: Double, private val height: Double) {
             var hold = CatergoryDisplay(cater, catWidth, catHeight)
             hold.setStyleClass(catergories.indexOf(cater))
             catergoryPane.addColumn(catergories.indexOf(cater), hold.rootPane)
+            hold.setDescription(catergories.indexOf(cater))
             catergoryPane.alignment = Pos.CENTER
             this.catergoryDisplays.add(hold)
         }
+//        catergoryPane.addColumn(1,spacer1)
+//        catergoryPane.addColumn(3,spacer2)
 
+    }
+
+    private fun addTigerHead(){
+        tigerhHead = TigerHead(100.0)
+        root.children.add(tigerhHead.rootPane)
+    }
+
+    fun update(){
+        tigerhHead.updateHex()
     }
 }
